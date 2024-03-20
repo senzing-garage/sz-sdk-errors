@@ -1,4 +1,4 @@
-# template-python
+# g2errors
 
 If you are beginning your journey with
 [Senzing](https://senzing.com/),
@@ -20,10 +20,10 @@ This section should give 4-5 sentences on what the artifacts in this repository 
 
 This section should be replaced with real "**Overview**" content after initial repository creation.
 
-This repository (template-python) contains exemplar python scripts that can be used to start a new python project.
+This repository (g2errors) contains exemplar python scripts that can be used to start a new python project.
 
 The
-[template-python.py](template-python.py)
+[g2errors.py](g2errors.py)
 python script is a boilerplate which has the following features:
 
 1. Conforms to
@@ -69,7 +69,7 @@ For the most part, instructions are copy and paste.
 Whenever thinking is needed, it's marked with a "thinking" icon :thinking:.
 Whenever customization is needed, it's marked with a "pencil" icon :pencil2:.
 If the instructions are not clear, please let us know by opening a new
-[Documentation issue](https://github.com/senzing-garage/template-python/issues/new?template=documentation_request.md)
+[Documentation issue](https://github.com/senzing-garage/g2errors/issues/new?template=documentation_request.md)
 describing where we can improve.   Now on with the show...
 
 ### Legend
@@ -117,14 +117,14 @@ These are "one-time tasks" which may already have been completed.
 ### Download
 
 1. Get a local copy of
-   [template-python.py](template-python.py).
+   [g2errors.py](g2errors.py).
    Example:
 
     1. :pencil2: Specify where to download file.
        Example:
 
         ```console
-        export SENZING_DOWNLOAD_FILE=~/template-python.py
+        export SENZING_DOWNLOAD_FILE=~/g2errors.py
         ```
 
     1. Download file.
@@ -133,7 +133,7 @@ These are "one-time tasks" which may already have been completed.
         ```console
         curl -X GET \
           --output ${SENZING_DOWNLOAD_FILE} \
-          https://raw.githubusercontent.com/Senzing/template-python/main/template-python.py
+          https://raw.githubusercontent.com/Senzing/g2errors/main/g2errors.py
         ```
 
     1. Make file executable.
@@ -288,5 +288,5 @@ Configuration values specified by environment variable or command line parameter
 1. [Errors](docs/errors.md)
 1. [Examples](docs/examples.md)
 1. Related artifacts:
-    1. [DockerHub](https://hub.docker.com/r/senzing/template-python)
-    1. [Helm Chart](https://github.com/senzing-garage/charts/tree/main/charts/template-python)
+    1. [DockerHub](https://hub.docker.com/r/senzing/g2errors)
+    1. [Helm Chart](https://github.com/senzing-garage/charts/tree/main/charts/g2errors)

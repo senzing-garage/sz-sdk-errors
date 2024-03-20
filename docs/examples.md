@@ -1,4 +1,4 @@
-# template-python examples
+# g2errors examples
 
 ## Examples of CLI
 

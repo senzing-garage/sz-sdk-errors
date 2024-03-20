@@ -20,24 +20,9 @@ hello-world-osarch-specific:
 	@echo "Hello World, from windows."
 
 
-.PHONY: package-osarch-specific
-package-osarch-specific:
-	@echo No packaging for windows.
-
-
-.PHONY: run-osarch-specific
-run-osarch-specific:
-	@go run main.go
-
-
 .PHONY: setup-osarch-specific
 setup-osarch-specific:
 	@echo "No setup required."
-
-
-.PHONY: test-osarch-specific
-test-osarch-specific:
-	@go test -v -p 1 ./...
 
 # -----------------------------------------------------------------------------
 # Makefile targets supported only by this platform.

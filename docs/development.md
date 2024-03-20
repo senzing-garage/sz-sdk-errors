@@ -1,4 +1,4 @@
-# template-python development
+# g2errors development
 
 The following instructions are used when modifying and building the Docker image.
 

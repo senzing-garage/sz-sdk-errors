@@ -2,7 +2,7 @@
 
 '''
 # -----------------------------------------------------------------------------
-# template-python.py Example python skeleton.
+# g2errors.py Example python skeleton.
 # Can be used as a boiler-plate to build new python scripts.
 # This skeleton implements the following features:
 #   1) "command subcommand" command line.
@@ -163,7 +163,7 @@ def get_parser():
                 for argument, argument_value in arguments.items():
                     subcommand_value['arguments'][argument] = argument_value
 
-    parser = argparse.ArgumentParser(prog="template-python.py", description="Add description. For more information, see https://github.com/senzing-garage/template-python")
+    parser = argparse.ArgumentParser(prog="g2errors.py", description="Add description. For more information, see https://github.com/senzing-garage/g2errors")
     subparsers = parser.add_subparsers(dest='subcommand', help='Subcommands (SENZING_SUBCOMMAND):')
 
     for subcommand_key, subcommand_values in subcommands.items():
