@@ -1040,10 +1040,14 @@
         "comment": "Comparison function call does not exist for feature [{0}]."
     },
     "2248": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_DISTINCT_FUNCTION_CALL_DOES_NOT_EXIST_FOR_FEATURE",
+        "comment": "Distinct feature function call does not exist for feature [{0}]."
     },
     "2249": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_CONFLICTING_SPECIFIERS_FOR_FUNCTION_CALL",
+        "comment": "Conflicting specifiers: Function call ID [{0}] does not match function call ID [{1}] from feature type."
     },
     "2250": {
         "class": "G2ConfigurationError",
@@ -1066,7 +1070,9 @@
         "comment": "Attribute class code [{0}] does not exist."
     },
     "2254": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_FUNCTION_USES_NEITHER_FTYPE_NOR_FELEM_TRIGGER",
+        "comment": "Function call requested uses neither triggering feature type [{0}] nor triggering feature element code [{1}].  At least one trigger must be specified."
     },
     "2255": {
         "class": "G2ConfigurationError",
@@ -1194,10 +1200,14 @@
         "comment": "Feature comparison function code [{0}] does not exist."
     },
     "2281": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_CFRTN_VALUE_ALREADY_EXISTS",
+        "comment": "Feature comparison function return value [{0}] already exists for comparison function [{1}] ftype [{2}]."
     },
     "2282": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_CFUNC_EXEC_ORDER_ALREADY_EXISTS",
+        "comment": "Feature comparison function exec order value [{0}] already exists for comparison function [{1}] ftype [{2}]."
     },
     "2283": {
         "class": "G2ConfigurationError",
@@ -1235,10 +1245,14 @@
         "comment": "Rule fragment [{0}] is configured for use in rules(s) [{1}]."
     },
     "2291": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_FRAGMENT_IS_CONFIGURED_FOR_USE_IN_FRAGMENT",
+        "comment": "Rule fragment [{0}] is configured for use in fragments(s) [{1}]."
     },
     "2292": {
-        "class": "G2Error"
+        "class": "G2Error",
+        "name": "EAS_ERR_CANT_RETRIEVE_OBS_FEATURE_DATA_FOR_OBS_ENT",
+        "comment": "Could not retrieve observed feature data for observed entity [{0}]."
     },
     "2293": {
         "class": "G2Error",
@@ -1261,7 +1275,9 @@
         "comment": "Invalid [SQL] Backend Parameter. Valid values are SQL or HYBRID"
     },
     "7211": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_DB_BAD_CLUSTER_SIZE",
+        "comment": "Cluster [{0}] is configured with an invalid size. Size must be equal to 1."
     },
     "7212": {
         "class": "G2ConfigurationError",
@@ -1284,7 +1300,9 @@
         "comment": "Cluster [{0}] does not exist"
     },
     "7220": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_NO_CONFIG_REGISTERED_IN_DATASTORE",
+        "comment": "No engine configuration registered in datastore (see https:#senzing.zendesk.com/hc/en-us/articles/360036587313)."
     },
     "7221": {
         "class": "G2ConfigurationError",
@@ -1292,7 +1310,9 @@
         "comment": "No engine configuration registered with data ID [{0}]."
     },
     "7222": {
-        "class": "G2Error"
+        "class": "G2Error",
+        "name": "EAS_ERR_FAILED_TO_SET_SYS_VAR_IN_DATASTORE",
+        "comment": "Could not set system variable value in database for Group[{0}],Code[{1}],Value[{2}]."
     },
     "7223": {
         "class": "G2ConfigurationError",
@@ -1305,7 +1325,9 @@
         "comment": "Invalid version number for engine schema [version '{0}']."
     },
     "7226": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_INCOMPATIBLE_DATASTORE_SCHEMA_VERSION",
+        "comment": "Incompatible datastore schema version: [Engine version '{0}'.  Datastore version '{1}' is installed, but must be between '{2}' and '{3}'.]"
     },
     "7227": {
         "class": "G2ConfigurationError",
@@ -1338,10 +1360,14 @@
         "comment": "Failed to get encryption signature: '{0}'"
     },
     "7235": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_FTYPE_CONFIGURED_AS_REL_BUT_NO_RTYPE",
+        "comment": "FTYPE_CODE[{0}] IS CONFIGURED AS A RELATIONSHIP FEATURE TYPE BUT RTYPE_ID IS NOT SET."
     },
     "7236": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_DUPLICATE_BEHAVIOR_OVERRIDE_KEY_IN_CFG_FBOVR",
+        "comment": "Duplicate behavior override keys in CFG_FBOVR -- FTYPE_ID[{0}], UTYPE_CODE[{1}] referenced in CFG_FBOVR."
     },
     "7237": {
         "class": "G2ConfigurationError",
@@ -1349,10 +1375,14 @@
         "comment": "Unknown FTYPE_ID[{0}] referenced in {1}."
     },
     "7239": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_INVALID_GENERIC_THRESHOLD_CANDIDATE_CAP",
+        "comment": "Invalid generic threshold {0} cap [{1}] for [GPLAN_ID[{2}], BEHAVIOR[{3}], FTYPE_ID[{4}]]."
     },
     "7240": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_INCORRECT_BEHAVIOR_REFERENCED",
+        "comment": "Incorrect BEHAVIOR[{0}] referenced in CFG_GENERIC_THRESHOLD for [GPLAN_ID[{1}], FTYPE_ID[{2}]].  FType configured for behavior [{3}]"
     },
     "7241": {
         "class": "G2ConfigurationError",
@@ -1360,10 +1390,14 @@
         "comment": "Unknown FTYPE_ID[{0}] referenced in {1}."
     },
     "7242": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_MULTIPLE_GENERIC_THRESHOLD_DEFINITIONS",
+        "comment": "Multiple Generic Threshold definitions for [GPLAN_ID[{0}], BEHAVIOR[{1}], FTYPE_ID[{2}]]."
     },
     "7243": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_ER_FRAGMENT_HAS_UNDEFINED_DEPENDENT_FRAGMENTS",
+        "comment": "ER Fragment [{0}] configured with undefined dependent fragments. Fragment [{1}] undefined."
     },
     "7244": {
         "class": "G2ConfigurationError",
@@ -1371,13 +1405,19 @@
         "comment": "ER Rule Fragment configuration lacks the required {0} fragment."
     },
     "7245": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_CURRENT_CONFIG_REGISTERED_DOES_NOT_MATCH_DATA_ID",
+        "comment": "Current configuration ID does not match specified data ID [{0}]."
     },
     "7246": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_INVALID_MAXIMUM_DATASTORE_SCHEMA_VERSION",
+        "comment": "Invalid maximum datastore version number for engine schema [version '{0}']."
     },
     "7247": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_INVALID_MINIMUM_DATASTORE_SCHEMA_VERSION",
+        "comment": "Invalid minimum datastore version number for engine schema [version '{0}']."
     },
     "7303": {
         "class": "G2BadInputError",
@@ -1415,7 +1455,9 @@
         "comment": "Transliteration failed"
     },
     "7511": {
-        "class": "G2Error"
+        "class": "G2Error",
+        "name": "EAS_ERR_ABORT_ER_AND_RETRY",
+        "comment": "Detected change in candidate entity[{0}].  Restarting ER evaluation."
     },
     "8000": {
         "class": "G2BadInputError",
@@ -1468,7 +1510,9 @@
         "comment": "Failed {0} to get random content"
     },
     "8516": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_SALT_MUST_BE_SIZE",
+        "comment": "A salt value must be {0} bytes long but the provided one is {1} bytes."
     },
     "8517": {
         "class": "G2ConfigurationError",
@@ -1576,7 +1620,9 @@
         "comment": "Hashing method {0} not supported."
     },
     "8557": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_SALT_METHOD_DOES_NOT_MATCH",
+        "comment": "The hashing method in the configuration ({1}) does not match the method ({2}) of the salt {0}"
     },
     "8593": {
         "class": "G2Error",
@@ -1609,7 +1655,9 @@
         "comment": "Using a named salt requires the Secure Store configured and running"
     },
     "8602": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_HASHER_CHECKSUM_DOES_NOT_MATCH",
+        "comment": "The hashing checksum configured ({1}) does not match the checksum ({2}) of the salt named {0}"
     },
     "8603": {
         "class": "G2Error",
@@ -1632,7 +1680,9 @@
         "comment": "Hashing requires a salt to be configured."
     },
     "8607": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_HASHER_INVALID_ARGS",
+        "comment": "Invalid arguments to hashing function. Either a parameter wasn't provided or a buffer was too small: location={0}, dataPtr={1}, dataLength={2}, outputPtr={3}, outputLength={4}, output={5}"
     },
     "8608": {
         "class": "G2ConfigurationError",
@@ -1665,7 +1715,9 @@
         "comment": "Insufficient configuration for the {0} table!"
     },
     "9111": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_PARSE_FRAGMENT",
+        "comment": "ERROR parsing FragmentID[{0}] FragmentName[{1}] : [{2}] is an invalid RuleID dependency"
     },
     "9112": {
         "class": "G2ConfigurationError",
@@ -1713,16 +1765,24 @@
         "comment": "Unable to initialize Digest Context."
     },
     "9220": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_FTYPE_CANNOT_BE_HASHED",
+        "comment": "FType configured to be hashed, but cannot be scored.  FTYPE_ID[{0}] FTYPE_CODE[{1}]"
     },
     "9222": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_FTYPE_CONFIGURED_TO_BE_HASHED_MISSING_SALT",
+        "comment": "A Feature Type is marked for hashing, but a valid salt value was not found.  FTYPE_ID[{0}] FTYPE_CODE[{1}]"
     },
     "9224": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_FTYPE_CONFIGURED_TO_BE_HASHED",
+        "comment": "A Feature Type is marked for hashing, but a valid salt value was not found.  FTYPE_ID[{0}] FTYPE_CODE[{1}]"
     },
     "9228": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_UNEXPECTED_SALT_CHECKUM_LIST",
+        "comment": "The SALT checksum on the Observation does not match the EXPECTED SALT checksum: EXPECTED=[{0}] Observation=[{1}]"
     },
     "9240": {
         "class": "G2ConfigurationError",
@@ -1895,16 +1955,24 @@
         "comment": "Secure Store has not been initialized"
     },
     "9284": {
-        "class": "G2Error"
+        "class": "G2Error",
+        "name": "EAS_ERR_G2SS_INVALID_SLOT_ID",
+        "comment": "Can not obtain info on specified slot. Possibly invalid slot ID specified in Secure Store URL: {0}"
     },
     "9285": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_G2SS_NO_TOKEN_IN_SLOT",
+        "comment": "No security token present in slot specified by Secure Store URL: slot ID = {0}"
     },
     "9286": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_G2SS_TOKEN_NOT_FOUND",
+        "comment": "Can not obtain info for security token. Possibly invalid token label and/or slot ID specified in Secure Store URL: {0}"
     },
     "9287": {
-        "class": "G2Error"
+        "class": "G2Error",
+        "name": "EAS_ERR_G2SS_TOKEN_IMPL_ERROR",
+        "comment": "An internal error occurred in the security token implementation library: Return Code = {0}"
     },
     "9288": {
         "class": "G2Error",
@@ -1927,7 +1995,9 @@
         "comment": "No password supplied"
     },
     "9293": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_G2SS_NO_SEC_STORE_PREFIX",
+        "comment": "Secure Store expects a different format (starting with {0}) when a password is supplied"
     },
     "9295": {
         "class": "G2ConfigurationError",
@@ -1965,7 +2035,9 @@
         "comment": "Missing Sequence Entry[{0}] in the SYS_SEQUENCE table!"
     },
     "9305": {
-        "class": "G2Error"
+        "class": "G2Error",
+        "name": "EAS_ERR_SEQUENCE_RETRIES_FAILED",
+        "comment": "Retries failed to retrieve Sequence Entry[{0}] in the SYS_SEQUENCE table!  This may mean the CACHE_SIZE is too small."
     },
     "9308": {
         "class": "G2ConfigurationError",
@@ -2023,10 +2095,14 @@
         "comment": "Invalid data string. Data must be in UTF-8."
     },
     "9500": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_TOKEN_LIBRARY_CHECKSUM_MISMATCH",
+        "comment": "Cannot load token library. The checksum does not match the configuration of this node. Found: [{0}] Expected: [{1}]"
     },
     "9701": {
-        "class": "G2Error"
+        "class": "G2Error",
+        "name": "EAS_ERR_CANT_RETRIEVE_INDEX_FROM_MEMORY_ROW",
+        "comment": "Cannot retrieve index[{0}] from memory row of key[{1}], out of range!"
     },
     "9703": {
         "class": "G2Error",
@@ -2034,10 +2110,14 @@
         "comment": "Current field in memory row is passed end of row"
     },
     "9802": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_INBOUND_OBS_CONFIG_CHECKSUM_MISMATCH",
+        "comment": "Configuration checksum on inbound observation [{0}] does not match this nodes configuration checksum [{1}]. Cannot process."
     },
     "9803": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_CALC_CONFIGCHKSUM_AND_PARAMSTORE_CONFIGCHKSUM_DONT_MATCH",
+        "comment": "The calculated configuration checksum [{0}] does not match the CONFIGURATION_CHECKSUM value in the parameter store [{1}]."
     },
     "30011": {
         "class": "G2Error",
@@ -2093,165 +2173,5 @@
         "class": "G2BadInputError",
         "name": "EAS_ERR_UNKNOWN_COLUMN_REQUESTED_FOR_CSV_EXPORT",
         "comment": "Invalid column [{0}] requested for CSV export."
-    },
-    "999921": {
-        "name": "EAS_ERR_CALC_CONFIGCHKSUM_AND_PARAMSTORE_CONFIGCHKSUM_DONT_MATCH",
-        "comment": "The calculated configuration checksum [{0}] does not match the CONFIGURATION_CHECKSUM value in the parameter store [{1}]."
-    },
-    "999934": {
-        "name": "EAS_ERR_INBOUND_OBS_CONFIG_CHECKSUM_MISMATCH",
-        "comment": "Configuration checksum on inbound observation [{0}] does not match this nodes configuration checksum [{1}]. Cannot process."
-    },
-    "999942": {
-        "name": "EAS_ERR_DISTINCT_FUNCTION_CALL_DOES_NOT_EXIST_FOR_FEATURE",
-        "comment": "Distinct feature function call does not exist for feature [{0}]."
-    },
-    "999943": {
-        "name": "EAS_ERR_CONFLICTING_SPECIFIERS_FOR_FUNCTION_CALL",
-        "comment": "Conflicting specifiers: Function call ID [{0}] does not match function call ID [{1}] from feature type."
-    },
-    "999944": {
-        "name": "EAS_ERR_FUNCTION_USES_NEITHER_FTYPE_NOR_FELEM_TRIGGER",
-        "comment": "Function call requested uses neither triggering feature type [{0}] nor triggering feature element code [{1}].  At least one trigger must be specified."
-    },
-    "999945": {
-        "name": "EAS_ERR_CANT_RETRIEVE_INDEX_FROM_MEMORY_ROW",
-        "comment": "Cannot retrieve index[{0}] from memory row of key[{1}], out of range!"
-    },
-    "999946": {
-        "name": "EAS_ERR_CFRTN_VALUE_ALREADY_EXISTS",
-        "comment": "Feature comparison function return value [{0}] already exists for comparison function [{1}] ftype [{2}]."
-    },
-    "999947": {
-        "name": "EAS_ERR_CFUNC_EXEC_ORDER_ALREADY_EXISTS",
-        "comment": "Feature comparison function exec order value [{0}] already exists for comparison function [{1}] ftype [{2}]."
-    },
-    "999948": {
-        "name": "EAS_ERR_TOKEN_LIBRARY_CHECKSUM_MISMATCH",
-        "comment": "Cannot load token library. The checksum does not match the configuration of this node. Found: [{0}] Expected: [{1}]"
-    },
-    "999949": {
-        "name": "EAS_ERR_FRAGMENT_IS_CONFIGURED_FOR_USE_IN_FRAGMENT",
-        "comment": "Rule fragment [{0}] is configured for use in fragments(s) [{1}]."
-    },
-    "999950": {
-        "name": "EAS_ERR_CANT_RETRIEVE_OBS_FEATURE_DATA_FOR_OBS_ENT",
-        "comment": "Could not retrieve observed feature data for observed entity [{0}]."
-    },
-    "999951": {
-        "name": "EAS_ERR_DB_BAD_CLUSTER_SIZE",
-        "comment": "Cluster [{0}] is configured with an invalid size. Size must be equal to 1."
-    },
-    "999952": {
-        "name": "EAS_ERR_NO_CONFIG_REGISTERED_IN_DATASTORE",
-        "comment": "No engine configuration registered in datastore (see https:#senzing.zendesk.com/hc/en-us/articles/360036587313)."
-    },
-    "999953": {
-        "name": "EAS_ERR_FAILED_TO_SET_SYS_VAR_IN_DATASTORE",
-        "comment": "Could not set system variable value in database for Group[{0}],Code[{1}],Value[{2}]."
-    },
-    "999954": {
-        "name": "EAS_ERR_INCOMPATIBLE_DATASTORE_SCHEMA_VERSION",
-        "comment": "Incompatible datastore schema version: [Engine version '{0}'.  Datastore version '{1}' is installed, but must be between '{2}' and '{3}'.]"
-    },
-    "999955": {
-        "name": "EAS_ERR_FTYPE_CONFIGURED_AS_REL_BUT_NO_RTYPE",
-        "comment": "FTYPE_CODE[{0}] IS CONFIGURED AS A RELATIONSHIP FEATURE TYPE BUT RTYPE_ID IS NOT SET."
-    },
-    "999956": {
-        "name": "EAS_ERR_DUPLICATE_BEHAVIOR_OVERRIDE_KEY_IN_CFG_FBOVR",
-        "comment": "Duplicate behavior override keys in CFG_FBOVR -- FTYPE_ID[{0}], UTYPE_CODE[{1}] referenced in CFG_FBOVR."
-    },
-    "999957": {
-        "name": "EAS_ERR_INVALID_GENERIC_THRESHOLD_CANDIDATE_CAP",
-        "comment": "Invalid generic threshold {0} cap [{1}] for [GPLAN_ID[{2}], BEHAVIOR[{3}], FTYPE_ID[{4}]]."
-    },
-    "999958": {
-        "name": "EAS_ERR_INCORRECT_BEHAVIOR_REFERENCED",
-        "comment": "Incorrect BEHAVIOR[{0}] referenced in CFG_GENERIC_THRESHOLD for [GPLAN_ID[{1}], FTYPE_ID[{2}]].  FType configured for behavior [{3}]"
-    },
-    "999959": {
-        "name": "EAS_ERR_MULTIPLE_GENERIC_THRESHOLD_DEFINITIONS",
-        "comment": "Multiple Generic Threshold definitions for [GPLAN_ID[{0}], BEHAVIOR[{1}], FTYPE_ID[{2}]]."
-    },
-    "999960": {
-        "name": "EAS_ERR_ER_FRAGMENT_HAS_UNDEFINED_DEPENDENT_FRAGMENTS",
-        "comment": "ER Fragment [{0}] configured with undefined dependent fragments. Fragment [{1}] undefined."
-    },
-    "999961": {
-        "name": "EAS_ERR_CURRENT_CONFIG_REGISTERED_DOES_NOT_MATCH_DATA_ID",
-        "comment": "Current configuration ID does not match specified data ID [{0}]."
-    },
-    "999962": {
-        "name": "EAS_ERR_INVALID_MAXIMUM_DATASTORE_SCHEMA_VERSION",
-        "comment": "Invalid maximum datastore version number for engine schema [version '{0}']."
-    },
-    "999963": {
-        "name": "EAS_ERR_INVALID_MINIMUM_DATASTORE_SCHEMA_VERSION",
-        "comment": "Invalid minimum datastore version number for engine schema [version '{0}']."
-    },
-    "999964": {
-        "name": "EAS_ERR_ABORT_ER_AND_RETRY",
-        "comment": "Detected change in candidate entity[{0}].  Restarting ER evaluation."
-    },
-    "999965": {
-        "name": "EAS_ERR_SALT_MUST_BE_SIZE",
-        "comment": "A salt value must be {0} bytes long but the provided one is {1} bytes."
-    },
-    "999966": {
-        "name": "EAS_ERR_SALT_METHOD_DOES_NOT_MATCH",
-        "comment": "The hashing method in the configuration ({1}) does not match the method ({2}) of the salt {0}"
-    },
-    "999967": {
-        "name": "EAS_ERR_HASHER_CHECKSUM_DOES_NOT_MATCH",
-        "comment": "The hashing checksum configured ({1}) does not match the checksum ({2}) of the salt named {0}"
-    },
-    "999968": {
-        "name": "EAS_ERR_HASHER_INVALID_ARGS",
-        "comment": "Invalid arguments to hashing function. Either a parameter wasn't provided or a buffer was too small: location={0}, dataPtr={1}, dataLength={2}, outputPtr={3}, outputLength={4}, output={5}"
-    },
-    "999969": {
-        "name": "EAS_ERR_PARSE_FRAGMENT",
-        "comment": "ERROR parsing FragmentID[{0}] FragmentName[{1}] : [{2}] is an invalid RuleID dependency"
-    },
-    "999970": {
-        "name": "EAS_ERR_FTYPE_CANNOT_BE_HASHED",
-        "comment": "FType configured to be hashed, but cannot be scored.  FTYPE_ID[{0}] FTYPE_CODE[{1}]"
-    },
-    "999971": {
-        "name": "EAS_ERR_FTYPE_CONFIGURED_TO_BE_HASHED_MISSING_SALT",
-        "comment": "A Feature Type is marked for hashing, but a valid salt value was not found.  FTYPE_ID[{0}] FTYPE_CODE[{1}]"
-    },
-    "999972": {
-        "name": "EAS_ERR_FTYPE_CONFIGURED_TO_BE_HASHED",
-        "comment": "A Feature Type is marked for hashing, but a valid salt value was not found.  FTYPE_ID[{0}] FTYPE_CODE[{1}]"
-    },
-    "999973": {
-        "name": "EAS_ERR_UNEXPECTED_SALT_CHECKUM_LIST",
-        "comment": "The SALT checksum on the Observation does not match the EXPECTED SALT checksum: EXPECTED=[{0}] Observation=[{1}]"
-    },
-    "999974": {
-        "name": "EAS_ERR_G2SS_INVALID_SLOT_ID",
-        "comment": "Can not obtain info on specified slot. Possibly invalid slot ID specified in Secure Store URL: {0}"
-    },
-    "999975": {
-        "name": "EAS_ERR_G2SS_NO_TOKEN_IN_SLOT",
-        "comment": "No security token present in slot specified by Secure Store URL: slot ID = {0}"
-    },
-    "999976": {
-        "name": "EAS_ERR_G2SS_TOKEN_NOT_FOUND",
-        "comment": "Can not obtain info for security token. Possibly invalid token label and/or slot ID specified in Secure Store URL: {0}"
-    },
-    "999977": {
-        "name": "EAS_ERR_G2SS_TOKEN_IMPL_ERROR",
-        "comment": "An internal error occurred in the security token implementation library: Return Code = {0}"
-    },
-    "999978": {
-        "name": "EAS_ERR_G2SS_NO_SEC_STORE_PREFIX",
-        "comment": "Secure Store expects a different format (starting with {0}) when a password is supplied"
-    },
-    "999979": {
-        "name": "EAS_ERR_SEQUENCE_RETRIES_FAILED",
-        "comment": "Retries failed to retrieve Sequence Entry[{0}] in the SYS_SEQUENCE table!  This may mean the CACHE_SIZE is too small."
     }
 }
