@@ -169,7 +169,7 @@ class G2UnhandledError(G2UnrecoverableError):
 # -----------------------------------------------------------------------------
 
 EXCEPTION_MAP = {
-'''  # noqa: E101, W191, R801
+'''  # noqa: E101, W191
 
 
 OUTPUT_FOOTER = '''
@@ -309,7 +309,7 @@ def new_g2exception(
     }
     senzing_error_class = EXCEPTION_MAP.get(senzing_error_code, G2Error)
     return senzing_error_class(json.dumps(message))
-'''  # noqa: E101,F541,W191,R801
+'''  # noqa: E101,F541,W191
 
 with open(INPUT_FILE, encoding="utf-8") as input_file:
     errors = json.load(input_file)
