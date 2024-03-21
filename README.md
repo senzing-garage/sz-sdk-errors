@@ -15,6 +15,8 @@ Heck, it may not even be appropriate for your application of Senzing!
 ## Synopsis
 
 This repository is used to generate multi-language source code for mapping Senzing Engine return codes into the Senzing Error Hierarchy.
+The generated code is used by the Senzing SDKs.
+Most likely, the generated source code has no value to a customer.
 
 ## Overview
 
@@ -38,14 +40,12 @@ G2Error
 
 - Class hierarchy implementations:
   - [Go](https://github.com/senzing-garage/g2-sdk-go/blob/main/g2error/main.go)
-    - [Local](go/main.go)
+    ([Local](go/main.go))
   - Java
     - Locals
   - [Python](https://github.com/senzing-garage/g2-sdk-python-next/blob/main/src/senzing/g2exception.py)
-    - [Local](python/g2errors.py)
+    ([Local](python/g2errors.py))
 
 ## References
 
 1. [Development](docs/development.md)
-1. [Errors](docs/errors.md)
-1. [Examples](docs/examples.md)
