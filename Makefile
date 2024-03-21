@@ -43,8 +43,12 @@ build-go:
 	./bin/generate_go.py
 	gofmt -w go/main.go
 
+.PHONY: build-python
+build-python:
+	./bin/generate_python.py
+
 .PHONY: build
-build: build-go
+build: build-go build-python
 
 # -----------------------------------------------------------------------------
 # Utility targets
