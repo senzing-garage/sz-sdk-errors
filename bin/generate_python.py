@@ -26,9 +26,9 @@ def spaces_not_tabs():
 
 logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
 
-logging.info("{0}".format("-" * 80))
+logging.info("-" * 80)
 logging.info("--- {0} - Begin".format(os.path.basename(__file__)))
-logging.info("{0}".format("-" * 80))
+logging.info("-" * 80)
 
 # Create multi-line strings for output.
 
@@ -172,13 +172,6 @@ class G2UnhandledError(G2UnrecoverableError):
 EXCEPTION_MAP = {
 '''  # noqa: E101, W191
 
-TEST_FUNCTION_TEMPLATE = f"""
-	ctx := context.TODO()
-	jsonString := `{{json}}`
-	result, err := Unmarshal{{struct}}(ctx, jsonString)
-	testError(test, ctx, err)
-	printActual(test, result)
-"""  # noqa: E101,F541,W191
 
 OUTPUT_FOOTER = '''
 }
@@ -341,6 +334,6 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
 
 # Epilog.
 
-logging.info("{0}".format("-" * 80))
+logging.info("-" * 80)
 logging.info("--- {0} - End".format(os.path.basename(__file__)))
-logging.info("{0}".format("-" * 80))
+logging.info("-" * 80)

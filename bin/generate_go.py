@@ -15,7 +15,6 @@ OUTPUT_FILE = "go/main.go"
 
 def spaces_not_tabs():
     """Because tabs are used in OUTPUT_HEADER, linters get confused with spaces vs. tabs.  This solves it."""
-    pass
 
 
 # -----------------------------------------------------------------------------
@@ -26,9 +25,9 @@ def spaces_not_tabs():
 
 logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
 
-logging.info("{0}".format("-" * 80))
+logging.info("-" * 80)
 logging.info("--- {0} - Begin".format(os.path.basename(__file__)))
-logging.info("{0}".format("-" * 80))
+logging.info("-" * 80)
 
 # Create multi-line strings for output.
 
