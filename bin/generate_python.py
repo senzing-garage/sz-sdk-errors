@@ -15,7 +15,6 @@ OUTPUT_FILE = "python/g2errors.py"
 
 def spaces_not_tabs():
     """Because tabs are used in OUTPUT_HEADER, linters get confused with spaces vs. tabs.  This solves it."""
-    pass
 
 
 # -----------------------------------------------------------------------------
@@ -27,7 +26,7 @@ def spaces_not_tabs():
 logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
 
 logging.info("-" * 80)
-logging.info("--- {0} - Begin".format(os.path.basename(__file__)))
+logging.info("--- %s - Begin", os.path.basename(__file__))
 logging.info("-" * 80)
 
 # Create multi-line strings for output.
@@ -318,22 +317,22 @@ with open(INPUT_FILE, encoding="utf-8") as input_file:
 with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
     file.write(OUTPUT_HEADER)
     for error_number, error_data in errors.items():
-        output_line = ""
+        OUTPUT_LINE = ""
         error_class = error_data.get("class")
         if error_class:
 
-            output_line = f"    {error_number}: {{{error_class}}},"
+            OUTPUT_LINE = f"    {error_number}: {{{error_class}}},"
             error_name = error_data.get("name")
             error_comment = error_data.get("comment")
             if error_name or error_comment:
-                output_line += f"  # {error_name} - {error_comment}"
-        if len(output_line) > 0:
-            output_line += "\n"
-            file.write(output_line)
+                OUTPUT_LINE += f"  # {error_name} - {error_comment}"
+        if len(OUTPUT_LINE) > 0:
+            OUTPUT_LINE += "\n"
+            file.write(OUTPUT_LINE)
     file.write(OUTPUT_FOOTER)
 
 # Epilog.
 
 logging.info("-" * 80)
-logging.info("--- {0} - End".format(os.path.basename(__file__)))
+logging.info("--- %s} - End", os.path.basename(__file__))
 logging.info("-" * 80)

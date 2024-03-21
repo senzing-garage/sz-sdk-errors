@@ -26,7 +26,7 @@ def spaces_not_tabs():
 logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
 
 logging.info("-" * 80)
-logging.info("--- {0} - Begin".format(os.path.basename(__file__)))
+logging.info("--- %s - Begin", os.path.basename(__file__))
 logging.info("-" * 80)
 
 # Create multi-line strings for output.
@@ -116,14 +116,6 @@ const (
 var G2ErrorTypes = map[int][]G2ErrorTypeIds{
 """  # noqa: E101, W191
 
-TEST_FUNCTION_TEMPLATE = f"""
-	ctx := context.TODO()
-	jsonString := `{{json}}`
-	result, err := Unmarshal{{struct}}(ctx, jsonString)
-	testError(test, ctx, err)
-	printActual(test, result)
-"""  # noqa: E101,F541,W191
-
 OUTPUT_FOOTER = """
 }
 
@@ -152,41 +144,41 @@ with open(INPUT_FILE, encoding="utf-8") as input_file:
 with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
     file.write(OUTPUT_HEADER)
     for error_number, error_data in errors.items():
-        output_line = ""
+        OUTPUT_LINE = ""
         error_class = error_data.get("class")
         if error_class:
-            class_variable = error_class.removesuffix("Error")
-            match class_variable:
+            CLASS_VARIABLE = error_class.removesuffix("Error")
+            match CLASS_VARIABLE:
                 case "G2":
-                    class_variable = "G2Base"
+                    CLASS_VARIABLE = "G2Base"
                 case "G2NotFound":
-                    class_variable = "G2NotFound, G2BadInput"
+                    CLASS_VARIABLE = "G2NotFound, G2BadInput"
                 case "G2UnknownDatasource":
-                    class_variable = "G2UnknownDatasource, G2BadInput"
+                    CLASS_VARIABLE = "G2UnknownDatasource, G2BadInput"
                 case "G2DatabaseConnectionLost":
-                    class_variable = "G2DatabaseConnectionLost, G2Retryable"
+                    CLASS_VARIABLE = "G2DatabaseConnectionLost, G2Retryable"
                 case "G2RetryTimeoutExceeded":
-                    class_variable = "G2RetryTimeoutExceeded, G2Retryable"
+                    CLASS_VARIABLE = "G2RetryTimeoutExceeded, G2Retryable"
                 case "G2Database":
-                    class_variable = "G2Database, G2Unrecoverable"
+                    CLASS_VARIABLE = "G2Database, G2Unrecoverable"
                 case "G2License":
-                    class_variable = "G2License, G2Unrecoverable"
+                    CLASS_VARIABLE = "G2License, G2Unrecoverable"
                 case "G2NotInitialized":
-                    class_variable = "G2NotInitialized, G2Unrecoverable"
+                    CLASS_VARIABLE = "G2NotInitialized, G2Unrecoverable"
                 case "G2Unhandled":
-                    class_variable = "G2Unhandled, G2Unrecoverable"
-            output_line = f"{error_number}: {{{class_variable}}},"
+                    CLASS_VARIABLE = "G2Unhandled, G2Unrecoverable"
+            OUTPUT_LINE = f"{error_number}: {{{CLASS_VARIABLE}}},"
             error_name = error_data.get("name")
             error_comment = error_data.get("comment")
             if error_name or error_comment:
-                output_line += f" // {error_name} - {error_comment}"
-        if len(output_line) > 0:
-            output_line += "\n"
-            file.write(output_line)
+                OUTPUT_LINE += f" // {error_name} - {error_comment}"
+        if len(OUTPUT_LINE) > 0:
+            OUTPUT_LINE += "\n"
+            file.write(OUTPUT_LINE)
     file.write(OUTPUT_FOOTER)
 
 # Epilog.
 
 logging.info("{0}".format("-" * 80))
-logging.info("--- {0} - End".format(os.path.basename(__file__)))
+logging.info("--- %s} - End", os.path.basename(__file__))
 logging.info("{0}".format("-" * 80))
