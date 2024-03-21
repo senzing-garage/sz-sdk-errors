@@ -41,7 +41,7 @@ G2Error
     - [Local](go/main.go)
   - Java
     - Locals
-  - [Python](https://github.com/senzing-garage/g2-sdk-python-next/blob/main/src/senzing/g2exceptions.py)
+  - [Python](https://github.com/senzing-garage/g2-sdk-python-next/blob/main/src/senzing/g2exception.py)
     - [Local](python/g2errors.py)
 
 ## References
