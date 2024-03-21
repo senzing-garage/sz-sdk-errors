@@ -1005,7 +1005,9 @@
         "comment": "Distinct feature function call ID [{0}] already exists."
     },
     "2241": {
-        "class": "G2ConfigurationError"
+        "class": "G2ConfigurationError",
+        "name": "EAS_ERR_FTYPE_CODE_REQUIRED_BY_SEPARATE_EXPRESSED_FUNCTION_CALL",
+        "comment": "Feature type [{0}] required for separate expressed feature function call [{1}]."
     },
     "2242": {
         "class": "G2ConfigurationError",
@@ -2099,10 +2101,6 @@
     "999934": {
         "name": "EAS_ERR_INBOUND_OBS_CONFIG_CHECKSUM_MISMATCH",
         "comment": "Configuration checksum on inbound observation [{0}] does not match this nodes configuration checksum [{1}]. Cannot process."
-    },
-    "999941": {
-        "name": "EAS_ERR_FTYPE_CODE_REQUIRED_BY_SEPARATE_EXPRESSED_FUNCTION_CALL",
-        "comment": "Feature type [{0}] required for separate expressed feature function call [{1}]."
     },
     "999942": {
         "name": "EAS_ERR_DISTINCT_FUNCTION_CALL_DOES_NOT_EXIST_FOR_FEATURE",
