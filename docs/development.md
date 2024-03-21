@@ -1,6 +1,6 @@
 # g2errors development
 
-The following instructions are used when modifying and building the Docker image.
+The following instructions are used when modifying and generating source code.
 
 ## Prerequisites for development
 
@@ -10,7 +10,6 @@ These are "one-time tasks" which may already have been completed.
 1. The following software programs need to be installed:
     1. [git](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/git.md)
     1. [make](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/make.md)
-    1. [docker](https://github.com/senzing-garage/knowledge-base/blob/main/WHATIS/docker.md)
 
 ## Clone repository
 
@@ -20,36 +19,25 @@ see [Environment Variables](https://github.com/senzing-garage/knowledge-base/blo
 1. Set these environment variable values:
 
     ```console
-    export GIT_ACCOUNT=senzing
-    export GIT_REPOSITORY=template-docker
+    export GIT_ACCOUNT=senzing-garage
+    export GIT_REPOSITORY=g2errors
     export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
     export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
     ```
 
 1. Using the environment variables values just set, follow steps in [clone-repository](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/clone-repository.md) to install the Git repository.
 
-## Build Docker image
+## Update master list of Senzing engine errors
 
-1. **Option #1:** Using `docker` command and GitHub.
+1. Make modifications to
+   [g2errors.json](../g2errors.json)
 
-    ```console
-    sudo docker build \
-      --tag senzing/template \
-      https://github.com/senzing-garage/template-docker.git#main
-    ```
+## Generate source code
 
-1. **Option #2:** Using `docker` command and local repository.
+1. Generate source code.
 
     ```console
-    cd ${GIT_REPOSITORY_DIR}
-    sudo docker build --tag senzing/template .
-    ```
+    make build
+    ````
 
-1. **Option #3:** Using `make` command.
-
-    ```console
-    cd ${GIT_REPOSITORY_DIR}
-    sudo make docker-build
-    ```
-
-    Note: `sudo make docker-build-development-cache` can be used to create cached Docker layers.
+   This will create new files in the `go`, `java`, and `python` directories.
