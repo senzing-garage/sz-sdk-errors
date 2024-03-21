@@ -37,7 +37,7 @@ OUTPUT_HEADER = """// DO NOT EDIT.  This code is generated.
 
 OUTPUT_HEADER += f"// Generated date: {datetime.now(timezone.utc).isoformat()}\n"
 
-# noqa: E101
+# noqa: E101, R801
 OUTPUT_HEADER += """
 package g2error
 
@@ -114,7 +114,7 @@ const (
 // Note: The lists of G2ErrorTypeIds are from innermost error to outer most error.
 // Example:  #10 is G2RetryableError{G2RetryTimeoutExceededError{errors.New(message)}}
 var G2ErrorTypes = map[int][]G2ErrorTypeIds{
-"""  # noqa: E101, W191
+"""  # noqa: E101, W191, R801
 
 OUTPUT_FOOTER = """
 }
@@ -135,7 +135,7 @@ var AllG2ErrorTypes = []G2ErrorTypeIds{
 	G2UnknownDatasource,
 	G2Unrecoverable,
 }
-"""  # noqa: E101,F541,W191
+"""  # noqa: E101,F541,W191,R801
 
 
 with open(INPUT_FILE, encoding="utf-8") as input_file:
@@ -179,6 +179,6 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
 
 # Epilog.
 
-logging.info("{0}".format("-" * 80))
+logging.info("-" * 80)
 logging.info("--- %s} - End", os.path.basename(__file__))
-logging.info("{0}".format("-" * 80))
+logging.info("-" * 80)
