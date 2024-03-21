@@ -1,0 +1,31 @@
+name: gosec
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  LD_LIBRARY_PATH: /opt/senzing/g2/lib
+
+permissions:
+  contents: read
+
+jobs:
+  gosec:
+    runs-on: ubuntu-latest
+    env:
+      GO111MODULE: on
+      CGO_ENABLED: 1
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: run Gosec Security Scanner
+        uses: securego/gosec@master
+        with:
+          args: -verbose text ./...

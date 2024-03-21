@@ -2,7 +2,9 @@
 disable=
     broad-except,
     consider-using-f-string,
+    duplicate-code,
     line-too-long,
+    too-many-arguments,
     too-many-branches,
     too-many-locals,
 good-names=

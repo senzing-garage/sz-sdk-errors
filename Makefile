@@ -35,11 +35,27 @@ default: help
 hello-world: hello-world-osarch-specific
 
 # -----------------------------------------------------------------------------
+# Build
+# -----------------------------------------------------------------------------
+
+.PHONY: build-go
+build-go:
+	./bin/generate_go.py
+	gofmt -w go/main.go
+
+.PHONY: build-python
+build-python:
+	./bin/generate_python.py
+
+.PHONY: build
+build: build-go build-python
+
+# -----------------------------------------------------------------------------
 # Utility targets
 # -----------------------------------------------------------------------------
 
 .PHONY: clean
-clean: clean-osarch-specific 
+clean: clean-osarch-specific
 
 .PHONY: help
 help:
