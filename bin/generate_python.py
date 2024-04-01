@@ -169,12 +169,14 @@ class SzUnhandledError(SzUnrecoverableError):
 # Reference: https://senzing.zendesk.com/hc/en-us/articles/360026678133-Engine-Error-codes
 # -----------------------------------------------------------------------------
 
+# fmt: off
 EXCEPTION_MAP = {
 '''  # noqa: E101, W191
 
 
 OUTPUT_FOOTER = '''
 }
+# fmt: on
 
 
 # -----------------------------------------------------------------------------
