@@ -1,4 +1,4 @@
-# g2errors
+# sz-sdk-errors
 
 If you are beginning your journey with
 [Senzing](https://senzing.com/),
@@ -23,28 +23,28 @@ Most likely, the generated source code has no value to a customer.
 The Senzing Error Hierarchy is:
 
 ```console
-G2Error
-├── G2BadInputError
-│   ├── G2NotFoundError
-│   └── G2UnknownDatasourceError
-├── G2ConfigurationError
-├── G2RetryableError
-│   ├── G2DatabaseConnectionLostError
-│   └── G2RetryTimeoutExceededError
-└── G2UnrecoverableError
-    ├── G2DatabaseError
-    ├── G2LicenseError
-    ├── G2NotInitializedError
-    └── G2UnhandledError
+SzError
+├── SzBadInputError
+│   ├── SzNotFoundError
+│   └── SzUnknownDatasourceError
+├── SzConfigurationError
+├── SzRetryableError
+│   ├── SzDatabaseConnectionLostError
+│   └── SzRetryTimeoutExceededError
+└── SzUnrecoverableError
+    ├── SzDatabaseError
+    ├── SzLicenseError
+    ├── SzNotInitializedError
+    └── SzUnhandledError
 ```
 
 - Class hierarchy implementations:
-  - [Go](https://github.com/senzing-garage/g2-sdk-go/blob/main/g2error/main.go)
+  - [Go](https://github.com/senzing-garage/sz-sdk-go/blob/main/szerror/main.go)
     ([Local](go/main.go))
   - Java
     - Locals
-  - [Python](https://github.com/senzing-garage/g2-sdk-python-next/blob/main/src/senzing/g2exception.py)
-    ([Local](python/g2errors.py))
+  - [Python](https://github.com/senzing-garage/sz-sdk-python/blob/main/src/senzing/szerror.py)
+    ([Local](python/szerrors.py))
 
 ## References
 

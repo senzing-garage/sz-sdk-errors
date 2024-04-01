@@ -1,4 +1,4 @@
-# g2errors development
+# sz-sdk-errors development
 
 The following instructions are used when modifying and generating source code.
 
@@ -20,7 +20,7 @@ see [Environment Variables](https://github.com/senzing-garage/knowledge-base/blo
 
     ```console
     export GIT_ACCOUNT=senzing-garage
-    export GIT_REPOSITORY=g2errors
+    export GIT_REPOSITORY=sz-sdk-errors
     export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
     export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
     ```
@@ -30,7 +30,7 @@ see [Environment Variables](https://github.com/senzing-garage/knowledge-base/blo
 ## Update master list of Senzing engine errors
 
 1. Make modifications to
-   [g2errors.json](../g2errors.json)
+   [szerrors.json](../szerrors.json)
 
 ## Generate source code
 
