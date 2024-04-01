@@ -154,7 +154,7 @@ class SzDatabaseError(SzUnrecoverableError):
 
 
 class SzLicenseError(SzUnrecoverableError):
-    """ "Licence exception"""
+    """Licence exception"""
 
 
 class SzNotInitializedError(SzUnrecoverableError):
