@@ -1,1 +1,1 @@
-# g2errors examples
+# sz-sdk-errors examples
