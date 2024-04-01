@@ -169,12 +169,14 @@ class SzUnhandledError(SzUnrecoverableError):
 # Reference: https://senzing.zendesk.com/hc/en-us/articles/360026678133-Engine-Error-codes
 # -----------------------------------------------------------------------------
 
+# fmt: off
 EXCEPTION_MAP = {
 '''  # noqa: E101, W191
 
 
 OUTPUT_FOOTER = '''
 }
+# fmt: on
 
 
 # -----------------------------------------------------------------------------
@@ -322,7 +324,7 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
         error_class = error_data.get("class")
         if error_class:
 
-            OUTPUT_LINE = f"    {error_number}: {{{error_class}}},"
+            OUTPUT_LINE = f"    {error_number}: {error_class},"
             error_name = error_data.get("name")
             error_comment = error_data.get("comment")
             if error_name or error_comment:
