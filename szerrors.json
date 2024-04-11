@@ -17,7 +17,7 @@
     "10": {
         "class": "SzRetryTimeoutExceededError",
         "name": "EAS_ERR_RETRY_TIMEOUT",
-        "comment": "Retry timeout exceeded"
+        "comment": "Retry timeout exceeded RES_ENT_ID locklist [{0}]"
     },
     "14": {
         "class": "SzConfigurationError",
@@ -53,11 +53,6 @@
         "class": "SzBadInputError",
         "name": "EAS_ERR_CONFLICTING_RECORD_ID_VALUES",
         "comment": "Conflicting RECORD_ID values '{0}' and '{1}'"
-    },
-    "25": {
-        "class": "SzBadInputError",
-        "name": "EAS_ERR_CONFLICTING_LOAD_ID_VALUES",
-        "comment": "Conflicting LOAD_ID values '{0}' and '{1}'"
     },
     "26": {
         "class": "SzBadInputError",
@@ -146,8 +141,8 @@
     },
     "45": {
         "class": "SzError",
-        "name": "EAS_ERR_UMF_PROC_PROCESSING_FAILED",
-        "comment": "UMF procedure processing failed"
+        "name": "EAS_ERR_INPUT_PROCEDURE_PROCESSING_FAILED",
+        "comment": "Input procedure processing failed"
     },
     "46": {
         "class": "SzError",
@@ -239,11 +234,6 @@
         "name": "EAS_ERR_CONFUSED_ENTITY_FTYPE_MISSING",
         "comment": "CONFUSED_ENTITY Feature Type is not configured"
     },
-    "65": {
-        "class": "SzBadInputError",
-        "name": "EAS_ERR_UNKNOWN_ENTITY_TYPE_ID",
-        "comment": "Unknown entity type ID '{0}'"
-    },
     "66": {
         "class": "SzBadInputError",
         "name": "EAS_ERR_UNKNOWN_GENERIC_PLAN_VALUE",
@@ -282,7 +272,7 @@
     "79": {
         "class": "SzError",
         "name": "EAS_ERR_ERROR_WHEN_DECRYPTING",
-        "comment": "Error when decryting '{0}'"
+        "comment": "Error when decrypting '{0}'"
     },
     "80": {
         "class": "SzError",
@@ -337,7 +327,17 @@
     "90": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_CANNOT_ADD_LIBRARY_FEATURES_TO_DATASTORE",
-        "comment": "Cannot add library features to datastore"
+        "comment": "Cannot add library features to datastore:  '{0}'"
+    },
+    "91": {
+        "class": "SzError",
+        "name": "EAS_ERR_TRUSTED_ID_FTYPE_MISSING",
+        "comment": "TRUSTED_ID Feature Type is not configured"
+    },
+    "92": {
+        "class": "SzError",
+        "name": "EAS_ERR_RECORD_TYPE_FTYPE_MISSING",
+        "comment": "RECORD_TYPE Feature Type is not configured"
     },
     "999": {
         "class": "SzLicenseError",
@@ -469,11 +469,6 @@
         "name": "EAS_ERR_MISSING_ENT_SRC_KEY",
         "comment": "OBS_ENT is missing ENT_SRC_KEY"
     },
-    "2007": {
-        "class": "SzError",
-        "name": "EAS_ERR_MISSING_OBS_SRC_KEY",
-        "comment": "OBS is missing OBS_SRC_KEY"
-    },
     "2012": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_ERRULE_CONFIGURED_FOR_RESOLVE_AND_RELATE",
@@ -527,7 +522,7 @@
     "2047": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_MISSING_DSRC_CODE",
-        "comment": "OBS_SRC_KEY[{0}] is missing DSRC_CODE tag which is required"
+        "comment": "Observation is missing DSRC_CODE tag which is required"
     },
     "2048": {
         "class": "SzConfigurationError",
@@ -552,7 +547,7 @@
     "2057": {
         "class": "SzBadInputError",
         "name": "EAS_ERR_BAD_DSRC_ACTION",
-        "comment": "OBS_SRC_KEY[{0}] has DSRC_ACTION[{1}] which is invalid.  Valid values are [A]dd, [C]hange, [D]elete, [P]rune or E[X]tensive Evaluation"
+        "comment": "Observation has DSRC_ACTION[{0}] which is invalid.  Valid values are [A]dd, [C]hange, [D]elete or E[X]tensive Evaluation"
     },
     "2061": {
         "class": "SzConfigurationError",
@@ -614,11 +609,6 @@
         "name": "EAS_ERR_TABLE_CONFIGURED_WITH_INVALID_FELEM_CODE",
         "comment": "Table {0} configured with an invalid type FELEM_CODE[{1}]"
     },
-    "2077": {
-        "class": "SzConfigurationError",
-        "name": "EAS_ERR_TABLE_CONFIGURED_WITH_INVALID_ETYPE_ID",
-        "comment": "Table {0} configured with an invalid type ETYPE_ID[{1}]"
-    },
     "2079": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_EFBOM_CONFIGURED_WITH_INVALID_FTYPE_ID",
@@ -648,11 +638,6 @@
         "class": "SzConfigurationError",
         "name": "EAS_ERR_FUNC_BOM_CONFIGURED_WITH_INVALID_FELEM_ID",
         "comment": "{1} configured with an invalid type FELEM_ID[{0}]"
-    },
-    "2087": {
-        "class": "SzConfigurationError",
-        "name": "EAS_ERR_TABLE_CONFIGURED_WITH_DUPLICATE_CONFIG_FOR_EFU_TYPE",
-        "comment": "Table [{0}] configured with duplicate config values for ETYPE_ID[{1}]/FTYPE_ID[{2}]/UTYPE_CODE[{3}]"
     },
     "2088": {
         "class": "SzConfigurationError",
@@ -806,18 +791,18 @@
     },
     "2135": {
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_UMF_MAPPING_CONFIG_ERROR",
-        "comment": "Error in UMF Mapping Config[{0}]"
+        "name": "EAS_ERR_INPUT_MAPPING_CONFIG_ERROR",
+        "comment": "Error in input mapping config[{0}]"
     },
     "2136": {
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_UMF_MAPPING_MISSING_REQUIRED_FIELD",
-        "comment": "Error in UMF Mapping, missing required field[{0}]"
+        "name": "EAS_ERR_INPUT_MAPPING_MISSING_REQUIRED_FIELD",
+        "comment": "Error in input mapping, missing required field[{0}]"
     },
     "2137": {
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_UMF_MAPPING_MALFORMED_INPUT",
-        "comment": "Error in UMF Mapping, input message is malformed[{0}]"
+        "name": "EAS_ERR_INPUT_MAPPING_MALFORMED_INPUT",
+        "comment": "Error in input mapping, input message is malformed[{0}]"
     },
     "2138": {
         "class": "SzConfigurationError",
@@ -829,25 +814,10 @@
         "name": "EAS_ERR_DSRC_INTEREST_CONFIGURED_WITH_INVALID_DSRCID",
         "comment": "Data Source Interest configured with invalid Data Source ID DSRC_ID[{0}]"
     },
-    "2205": {
-        "class": "SzConfigurationError",
-        "name": "EAS_ERR_ENTITY_TYPE_CODE_ALREADY_EXISTS",
-        "comment": "Entity type code [{0}] already exists."
-    },
-    "2206": {
-        "class": "SzConfigurationError",
-        "name": "EAS_ERR_ENTITY_TYPE_ID_ALREADY_EXISTS",
-        "comment": "Entity type ID [{0}] already exists."
-    },
     "2207": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_DATA_SOURCE_CODE_DOES_NOT_EXIST",
         "comment": "Data source code [{0}] does not exist."
-    },
-    "2208": {
-        "class": "SzConfigurationError",
-        "name": "EAS_ERR_DATA_SOURCE_CODE_ALREADY_EXISTS",
-        "comment": "Data source code [{0}] already exists."
     },
     "2209": {
         "class": "SzConfigurationError",
@@ -1151,7 +1121,7 @@
     },
     "2271": {
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_SFUNC_CODE_ALREADY_EXISTS ",
+        "name": "EAS_ERR_SFUNC_CODE_ALREADY_EXISTS",
         "comment": "Feature standardization function code [{0}] already exists."
     },
     "2272": {
@@ -1264,11 +1234,6 @@
         "name": "EAS_ERR_DATA_SOURCE_ID_DOES_NOT_EXIST",
         "comment": "Data source ID [{0}] does not exist."
     },
-    "2295": {
-        "class": "SzError",
-        "name": "EAS_ERR_ETYPE_CODE_DOES_NOT_EXIST",
-        "comment": "Entity type code [{0}] does not exist."
-    },
     "7209": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_DB_BAD_BACKEND_TYPE",
@@ -1302,7 +1267,7 @@
     "7220": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_NO_CONFIG_REGISTERED_IN_DATASTORE",
-        "comment": "No engine configuration registered in datastore (see https:#senzing.zendesk.com/hc/en-us/articles/360036587313)."
+        "comment": "No engine configuration registered in datastore (see https://senzing.zendesk.com/hc/en-us/articles/360036587313)."
     },
     "7221": {
         "class": "SzConfigurationError",
@@ -1374,6 +1339,11 @@
         "name": "EAS_ERR_UNKNOWN_FTYPE_IN_TABLE",
         "comment": "Unknown FTYPE_ID[{0}] referenced in {1}."
     },
+    "7238": {
+        "class": "SzError",
+        "name": "EAS_ERR_DATASTORE_ENCRYPTION_CONFIGURATION_DOES_NOT_MATCH_DATASTORE",
+        "comment": "Datastore encryption configuration does not match data store:  '{0}'"
+    },
     "7239": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_INVALID_GENERIC_THRESHOLD_CANDIDATE_CAP",
@@ -1387,7 +1357,7 @@
     "7241": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_UNKNOWN_GPLAN_IN_TABLE",
-        "comment": "Unknown FTYPE_ID[{0}] referenced in {1}."
+        "comment": "Unknown GPLAN_ID[{0}] referenced in {1}."
     },
     "7242": {
         "class": "SzConfigurationError",
@@ -1777,7 +1747,7 @@
     "9224": {
         "class": "SzConfigurationError",
         "name": "EAS_ERR_FTYPE_CONFIGURED_TO_BE_HASHED",
-        "comment": "A Feature Type is marked for hashing, but a valid salt value was not found.  FTYPE_ID[{0}] FTYPE_CODE[{1}]"
+        "comment": "FType configured to be hashed, but no hashable data found.  FTYPE_ID[{0}] FTYPE_CODE[{1}]"
     },
     "9228": {
         "class": "SzConfigurationError",
@@ -1955,7 +1925,7 @@
         "comment": "Secure Store has not been initialized"
     },
     "9284": {
-        "class": "SzError",
+        "class": "SzConfigurationError",
         "name": "EAS_ERR_G2SS_INVALID_SLOT_ID",
         "comment": "Can not obtain info on specified slot. Possibly invalid slot ID specified in Secure Store URL: {0}"
     },
@@ -2099,15 +2069,15 @@
         "name": "EAS_ERR_TOKEN_LIBRARY_CHECKSUM_MISMATCH",
         "comment": "Cannot load token library. The checksum does not match the configuration of this node. Found: [{0}] Expected: [{1}]"
     },
+    "9501": {
+        "class": "SzError",
+        "name": "EAS_TOKEN_LIBRARY_ALREADY_HASHED",
+        "comment": "Cannot hash token library. The Token Library contains previous hashed data"
+    },
     "9701": {
         "class": "SzError",
         "name": "EAS_ERR_CANT_RETRIEVE_INDEX_FROM_MEMORY_ROW",
         "comment": "Cannot retrieve index[{0}] from memory row of key[{1}], out of range!"
-    },
-    "9703": {
-        "class": "SzError",
-        "name": "EAS_ERR_MEMTBL_COL_INDEX_TOO_BIG",
-        "comment": "Current field in memory row is passed end of row"
     },
     "9802": {
         "class": "SzConfigurationError",
