@@ -211,7 +211,7 @@ def get_location() -> str:
     :meta private:
     """
     stack = traceback.format_stack()
-    return stack[0].replace("\n   ", "", 1).rstrip()
+    return stack[0].replace("\\n   ", "", 1).rstrip()
 
 
 def get_message_level(error_id: int) -> str:
