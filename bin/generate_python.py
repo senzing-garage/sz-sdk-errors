@@ -204,14 +204,14 @@ ERROR_BUFFER_TYPE = c_char * 65535
 # -----------------------------------------------------------------------------
 
 
-def get_location(caller_skip: int) -> str:
+def get_location() -> str:
     """
     Determine caller.
 
     :meta private:
     """
     stack = traceback.format_stack()
-    return stack[len(stack) - caller_skip].strip()
+    return stack[0].replace("\\n   ", "", 1).rstrip()
 
 
 def get_message_level(error_id: int) -> str:

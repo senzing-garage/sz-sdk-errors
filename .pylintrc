@@ -6,6 +6,7 @@ disable=
     line-too-long,
     too-many-arguments,
     too-many-branches,
+    too-many-function-args,
     too-many-locals,
 good-names=
     szerrors
