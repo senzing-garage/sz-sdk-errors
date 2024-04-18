@@ -85,7 +85,7 @@ type SzNotFoundError struct{ error }
 type SzNotInitializedError struct{ error }
 type SzRetryTimeoutExceededError struct{ error }
 type SzUnhandledError struct{ error }
-type SzUnknownDatasourceError struct{ error }
+type SzUnknownDataSourceError struct{ error }
 
 // ----------------------------------------------------------------------------
 // Constants
@@ -103,7 +103,7 @@ const (
 	SzRetryable
 	SzRetryTimeoutExceeded
 	SzUnhandled
-	SzUnknownDatasource
+	SzUnknownDataSource
 	SzUnrecoverable
 )
 
@@ -133,7 +133,7 @@ var AllSzErrorTypes = []SzErrorTypeIds{
 	SzRetryable,
 	SzRetryTimeoutExceeded,
 	SzUnhandled,
-	SzUnknownDatasource,
+	SzUnknownDataSource,
 	SzUnrecoverable,
 }
 """  # noqa: E101,F541,W191
@@ -154,8 +154,8 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
                     CLASS_VARIABLE = "SzBase"
                 case "SzNotFound":
                     CLASS_VARIABLE = "SzNotFound, SzBadInput"
-                case "SzUnknownDatasource":
-                    CLASS_VARIABLE = "SzUnknownDatasource, SzBadInput"
+                case "SzUnknownDataSource":
+                    CLASS_VARIABLE = "SzUnknownDataSource, SzBadInput"
                 case "SzDatabaseConnectionLost":
                     CLASS_VARIABLE = "SzDatabaseConnectionLost, SzRetryable"
                 case "SzRetryTimeoutExceeded":

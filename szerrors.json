@@ -60,7 +60,7 @@
         "comment": "Inbound data contains a reserved keyword '{0}'"
     },
     "27": {
-        "class": "SzUnknownDatasourceError",
+        "class": "SzUnknownDataSourceError",
         "name": "EAS_ERR_UNKNOWN_DSRC_CODE_VALUE",
         "comment": "Unknown DATA_SOURCE value '{0}'"
     },

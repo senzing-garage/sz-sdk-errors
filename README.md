@@ -26,7 +26,7 @@ The Senzing Error Hierarchy is:
 SzError
 ├── SzBadInputError
 │   ├── SzNotFoundError
-│   └── SzUnknownDatasourceError
+│   └── SzUnknownDataSourceError
 ├── SzConfigurationError
 ├── SzRetryableError
 │   ├── SzDatabaseConnectionLostError

@@ -66,7 +66,7 @@ __all__ = [
     "SzRetryableError",
     "SzRetryTimeoutExceededError",
     "SzUnhandledError",
-    "SzUnknownDatasourceError",
+    "SzUnknownDataSourceError",
     "SzUnrecoverableError",
     "new_szexception",
 ]
@@ -120,8 +120,8 @@ class SzNotFoundError(SzBadInputError):
     """Not found"""
 
 
-class SzUnknownDatasourceError(SzBadInputError):
-    """Unknown Datasource"""
+class SzUnknownDataSourceError(SzBadInputError):
+    """Unknown DataSource"""
 
 
 # -----------------------------------------------------------------------------
