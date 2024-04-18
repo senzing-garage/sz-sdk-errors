@@ -57,7 +57,7 @@ type SzBadInputError struct {
 	error
 	SzErrorTypeIds []SzErrorTypeIds
 }
-type SZBaseError struct {
+type SzBaseError struct {
 	error
 	SzErrorTypeIds []SzErrorTypeIds
 }
