@@ -258,7 +258,6 @@ def get_senzing_error_code(error_text: str) -> int:
     except ValueError:
         print("ERROR: Could not parse error text '{error_text}'")
         result = 9999
-    assert isinstance(result, int)
     return result
 
 
@@ -277,7 +276,6 @@ def get_senzing_error_text(
     )
     clear_last_exception()
     result = ERROR_BUFFER.string_buffer.value.decode()
-    assert isinstance(result, str)
     return result
 
 
