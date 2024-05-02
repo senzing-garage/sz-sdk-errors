@@ -9,7 +9,7 @@ disable=
     too-many-function-args,
     too-many-locals,
 good-names=
-    szerrors
+    szerror
 ignore=
     __init__.py,
 notes=

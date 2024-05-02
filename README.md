@@ -44,7 +44,7 @@ SzError
   - Java
     - Locals
   - [Python](https://github.com/senzing-garage/sz-sdk-python/blob/main/src/senzing/szerror.py)
-    ([Local](python/szerrors.py))
+    ([Local](python/szerror.py))
 
 ## References
 
