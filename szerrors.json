@@ -1519,25 +1519,25 @@
     },
     "3121": {
         "code": "SENZ3121",
-        "class": "SzError",
+        "class": "SzBadInputError",
         "name": "EAS_ERR_JSON_PARSING_FAILURE",
         "comment": "JSON Parsing Failure [code={0},offset={1}]"
     },
     "3122": {
         "code": "SENZ3122",
-        "class": "SzError",
+        "class": "SzBadInputError",
         "name": "EAS_ERR_JSON_PARSING_FAILURE_MUST_BE_OBJECT_OR_ARRAY",
         "comment": "JSON Parsing Failure.  JSON must be object or array."
     },
     "3123": {
         "code": "SENZ3123",
-        "class": "SzError",
+        "class": "SzBadInputError",
         "name": "EAS_ERR_JSON_PARSING_FAILURE_OBJECT_HAS_DUPLICATE_KEYS",
         "comment": "Json object has duplicate keys."
     },
     "3131": {
         "code": "SENZ3131",
-        "class": "SzError",
+        "class": "SzBadInputError",
         "name": "EAS_ERR_UNKNOWN_COLUMN_REQUESTED_FOR_CSV_EXPORT",
         "comment": "Invalid column [{0}] requested for CSV export."
     },

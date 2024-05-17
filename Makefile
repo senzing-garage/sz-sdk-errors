@@ -36,7 +36,7 @@ hello-world: hello-world-osarch-specific
 .PHONY: build-go
 build-go:
 	./bin/generate_go.py
-	gofmt -w go/main.go
+	gofmt -w go/szerrortypes.go
 
 .PHONY: build-python
 build-python:
