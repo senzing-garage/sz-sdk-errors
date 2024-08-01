@@ -63,6 +63,7 @@ __all__ = [
     "SzLicenseError",
     "SzNotFoundError",
     "SzNotInitializedError",
+    "SzReplaceConflictError",
     "SzRetryableError",
     "SzRetryTimeoutExceededError",
     "SzUnhandledError",
@@ -99,9 +100,12 @@ class SzConfigurationError(SzError):
     """The program can provide a remedy and continue."""
 
 
-class SzRetryableError(SzError):
+class SzReplaceConflictError(SzError):
     """The program can provide a remedy and continue."""
 
+
+class SzRetryableError(SzError):
+    """The program can provide a remedy and continue."""
 
 class SzUnrecoverableError(SzError):
     """System failure, can't continue."""
