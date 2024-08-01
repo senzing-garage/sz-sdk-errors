@@ -42,7 +42,7 @@ OUTPUT_HEADER += f"// Generated date: {datetime.now(timezone.utc).isoformat()}\n
 OUTPUT_HEADER += """
 package szerror
 
-var SzErrorTypes = map[int][]SzErrorTypeIds{
+var SzErrorTypes = map[int][]TypeIDs{
 """  # noqa: E101, W191
 
 OUTPUT_FOOTER = "}"
