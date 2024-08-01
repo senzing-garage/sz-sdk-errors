@@ -29,6 +29,12 @@
         "name": "EAS_ERR_INVALID_DATASTORE_CONFIGURATION_TYPE",
         "comment": "Invalid Datastore Configuration Type"
     },
+    "18": {
+        "code": "SENZ0018",
+        "class": "SzError",
+        "name": "EAS_ERR_COULD_NOT_INITIALIZE_SYSTEM_PARAMETERS",
+        "comment": "Could not initialize system parameters"
+    },
     "19": {
         "code": "SENZ0019",
         "class": "SzConfigurationError",
@@ -65,11 +71,23 @@
         "name": "EAS_ERR_CONFLICTING_RECORD_ID_VALUES",
         "comment": "Conflicting RECORD_ID values '{0}' and '{1}'"
     },
+    "25": {
+        "code": "SENZ0025",
+        "class": "SzBadInputError",
+        "name": "EAS_ERR_INVALID_BULK_REQUEST",
+        "comment": "Invalid Bulk Request [{0}]"
+    },
     "26": {
         "code": "SENZ0026",
         "class": "SzBadInputError",
         "name": "EAS_ERR_RESERVED_WORD_USED_IN_DOCUMENT",
         "comment": "Inbound data contains a reserved keyword '{0}'"
+    },
+    "27": {
+        "code": "SENZ0027",
+        "class": "SzError",
+        "name": "EAS_ERR_INVALID_VALUE_FOR_SEARCH_ATTRIBUTES",
+        "comment": "Invalid value for search-attributes"
     },
     "28": {
         "code": "SENZ0028",
@@ -80,14 +98,26 @@
     "29": {
         "code": "SENZ0029",
         "class": "SzError",
-        "name": "EAS_ERR_INVALID_HANDLE",
-        "comment": "Invalid Handle"
+        "name": "EAS_ERR_INVALID_VALUE_OF_MAX_ENTITIES",
+        "comment": "Invalid value of max entities '{0}'"
     },
     "30": {
         "code": "SENZ0030",
         "class": "SzConfigurationError",
         "name": "EAS_ERR_INVALID_MATCH_LEVEL",
         "comment": "Invalid match level '{0}'"
+    },
+    "31": {
+        "code": "SENZ0031",
+        "class": "SzError",
+        "name": "EAS_ERR_INVALID_VALUE_OF_MAX_DEGREE",
+        "comment": "Invalid value of max degree '{0}'"
+    },
+    "32": {
+        "code": "SENZ0032",
+        "class": "SzError",
+        "name": "EAS_ERR_INVALID_VALUE_OF_BUILDOUT_DEGREE",
+        "comment": "Invalid value of build out degree '{0}'"
     },
     "33": {
         "code": "SENZ0033",
@@ -185,12 +215,6 @@
         "name": "EAS_ERR_G2_NOT_INITIALIZED",
         "comment": "G2 is not initialized"
     },
-    "49": {
-        "code": "SENZ0049",
-        "class": "SzNotInitializedError",
-        "name": "EAS_ERR_G2AUDIT_NOT_INITIALIZED",
-        "comment": "G2Audit is not initialized"
-    },
     "50": {
         "code": "SENZ0050",
         "class": "SzNotInitializedError",
@@ -274,6 +298,12 @@
         "class": "SzConfigurationError",
         "name": "EAS_ERR_CONFUSED_ENTITY_FTYPE_MISSING",
         "comment": "CONFUSED_ENTITY Feature Type is not configured"
+    },
+    "65": {
+        "code": "SENZ0065",
+        "class": "SzBadInputError",
+        "name": "EAS_ERR_SUPPRESSED_RELATION_DOMAIN_FTYPE_MISSING",
+        "comment": "SUPPRESSED_RELATION_DOMAIN Feature Type is not configured"
     },
     "66": {
         "code": "SENZ0066",
@@ -400,6 +430,30 @@
         "class": "SzError",
         "name": "EAS_ERR_RECORD_TYPE_FTYPE_MISSING",
         "comment": "RECORD_TYPE Feature Type is not configured"
+    },
+    "93": {
+        "code": "SENZ0093",
+        "class": "SzError",
+        "name": "EAS_ERR_CONFUSED_ENTTIY_FELEM_MISSING",
+        "comment": "YESNO_FLAG Feature Element is not configured"
+    },
+    "94": {
+        "code": "SENZ0094",
+        "class": "SzError",
+        "name": "EAS_ERR_DOMAIN_NAME_FELEM_MISSING",
+        "comment": "DOMAIN_NAME Feature Element is not configured"
+    },
+    "95": {
+        "code": "SENZ0095",
+        "class": "SzError",
+        "name": "EAS_ERR_SUPRESSED_RELATIONSHIP_FTYPE_ID_FELEM_MISSING",
+        "comment": "SUPRESSED_RELATIONSHIP_FTYPE_ID Feature Element is not configured"
+    },
+    "96": {
+        "code": "SENZ0096",
+        "class": "SzError",
+        "name": "EAS_ERR_SUPRESSED_RELATIONSHIP_CONNECTING_FTYPE_ID_FELEM_MISSING",
+        "comment": "SUPRESSED_RELATIONSHIP_CONNECTING_FTYPE_ID Feature Element is not configured"
     },
     "999": {
         "code": "SENZ0999",
@@ -556,6 +610,24 @@
         "class": "SzError",
         "name": "EAS_ERR_MISSING_ENT_SRC_KEY",
         "comment": "OBS_ENT is missing ENT_SRC_KEY"
+    },
+    "2007": {
+        "code": "SENZ2007",
+        "class": "SzError",
+        "name": "EAS_ERR_MISSING_OBS_SRC_KEY",
+        "comment": "OBS is missing OBS_SRC_KEY"
+    },
+    "2009": {
+        "code": "SENZ2009",
+        "class": "SzError",
+        "name": "EAS_ERR_NO_OBS_ENT_FOR_ENT_SRC_KEY",
+        "comment": "No OBS_ENT found for ENT_SRC_KEY[{0}]"
+    },
+    "2010": {
+        "code": "SENZ2010",
+        "class": "SzError",
+        "name": "EAS_ERR_ENT_SRC_KEY_CHANGED",
+        "comment": "Expected ENT_SRC_KEY [{0}] changed to [{1}]"
     },
     "2012": {
         "code": "SENZ2012",
@@ -809,6 +881,12 @@
         "name": "EAS_ERR_TABLE_CONFIGURED_WITH_INVALID_FTYPE_CODE_FELEM_CODE_PAIR",
         "comment": "Table {0} configured with an invalid FTYPE_CODE[{1}]/FELEM_CODE[{2}] pair"
     },
+    "2097": {
+        "code": "SENZ2097",
+        "class": "SzError",
+        "name": "EAS_ERR_DUPLICATE_VALUES_FOR_FIELDS_IN_TABLE",
+        "comment": "Duplicate values [{3}][{4}] of fields [{1}][{2}] in config [{0}]"
+    },
     "2099": {
         "code": "SENZ2099",
         "class": "SzConfigurationError",
@@ -902,7 +980,7 @@
     "2116": {
         "code": "SENZ2116",
         "class": "SzError",
-        "name": "EAS_ERR_UNITIALIZED_AMBIGUOUS_CACHE",
+        "name": "EAS_ERR_UNINITIALIZED_AMBIGUOUS_CACHE",
         "comment": "Uninitialized Ambiguous Test Cache"
     },
     "2117": {
@@ -973,7 +1051,7 @@
     },
     "2207": {
         "code": "SENZ2207",
-        "class": "SzConfigurationError",
+        "class": "SzUnknownDatasourceError",
         "name": "EAS_ERR_DATA_SOURCE_CODE_DOES_NOT_EXIST",
         "comment": "Data source code [{0}] does not exist."
     },
@@ -1499,6 +1577,12 @@
         "name": "EAS_ERR_INVALID_EXPORT_HANDLE",
         "comment": "Invalid Export Handle [{0}]"
     },
+    "3104": {
+        "code": "SENZ3104",
+        "class": "SzError",
+        "name": "EAS_ERR_INVALID_CONFIG_HANDLE",
+        "comment": "Invalid Config Handle [{0}]"
+    },
     "3110": {
         "code": "SENZ3110",
         "class": "SzError",
@@ -1711,7 +1795,7 @@
     },
     "7245": {
         "code": "SENZ7245",
-        "class": "SzConfigurationError",
+        "class": "SzReplaceConflictError",
         "name": "EAS_ERR_CURRENT_CONFIG_REGISTERED_DOES_NOT_MATCH_DATA_ID",
         "comment": "Current configuration ID does not match specified data ID [{0}]."
     },
@@ -1857,7 +1941,7 @@
         "code": "SENZ8521",
         "class": "SzError",
         "name": "EAS_ERR_SALT_G2SS_TOKEN_MUST_BE_INIT",
-        "comment": "Hashing with a named salt requires the Secure Store to be initialised."
+        "comment": "Hashing with a named salt requires the Secure Store to be initialized."
     },
     "8522": {
         "code": "SENZ8522",
@@ -1869,7 +1953,7 @@
         "code": "SENZ8524",
         "class": "SzError",
         "name": "EAS_ERR_SALT_G2SS_INIT_UNKNOWN_EXCEPTION",
-        "comment": "Secure Store initialization failed with an unrecognised exception"
+        "comment": "Secure Store initialization failed with an unrecognized exception"
     },
     "8525": {
         "code": "SENZ8525",
@@ -1940,7 +2024,7 @@
     "8542": {
         "code": "SENZ8542",
         "class": "SzError",
-        "name": "EAS_ERR_SALT_UNINITIALISED",
+        "name": "EAS_ERR_SALT_UNINITIALIZED",
         "comment": "Must load a salt before using it."
     },
     "8543": {
@@ -2162,7 +2246,7 @@
     "9228": {
         "code": "SENZ9228",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_UNEXPECTED_SALT_CHECKUM_LIST",
+        "name": "EAS_ERR_UNEXPECTED_SALT_CHECKSUM_LIST",
         "comment": "The SALT checksum on the Observation does not match the EXPECTED SALT checksum: EXPECTED=[{0}] Observation=[{1}]"
     },
     "9240": {
@@ -2204,13 +2288,13 @@
     "9254": {
         "code": "SENZ9254",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_TOKEN_UNINITIALISED",
+        "name": "EAS_ERR_G2SS_TOKEN_UNINITIALIZED",
         "comment": "Cannot open a Secure Store session when the token is uninitialized."
     },
     "9255": {
         "code": "SENZ9255",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_USER_PIN_UNINITIALISED",
+        "name": "EAS_ERR_G2SS_USER_PIN_UNINITIALIZED",
         "comment": "Secure Store credential is uninitialized."
     },
     "9256": {
@@ -2366,7 +2450,7 @@
     "9283": {
         "code": "SENZ9283",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_UNINITIALISED",
+        "name": "EAS_ERR_G2SS_UNINITIALIZED",
         "comment": "Secure Store has not been initialized"
     },
     "9284": {
@@ -2493,7 +2577,7 @@
         "code": "SENZ9311",
         "class": "SzError",
         "name": "EAS_ERR_COULD_NOT_RECORD_USAGE_TYPE",
-        "comment": "Could not record usage type [{0}] in the LIB_UTYPE table!"
+        "comment": "Could not record usage type [{0}] in the SYS_CODES_USED table!"
     },
     "9406": {
         "code": "SENZ9406",
