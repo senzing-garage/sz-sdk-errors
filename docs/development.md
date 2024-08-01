@@ -23,6 +23,7 @@ see [Environment Variables](https://github.com/senzing-garage/knowledge-base/blo
     export GIT_REPOSITORY=sz-sdk-errors
     export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
     export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
+
     ```
 
 1. Using the environment variables values just set, follow steps in [clone-repository](https://github.com/senzing-garage/knowledge-base/blob/main/HOWTO/clone-repository.md) to install the Git repository.
@@ -37,7 +38,9 @@ see [Environment Variables](https://github.com/senzing-garage/knowledge-base/blo
 1. Generate source code.
 
     ```console
+    cd ${GIT_REPOSITORY_DIR}
     make build
+
     ````
 
    This will create new files in the `go`, `java`, and `python` directories.
