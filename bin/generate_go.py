@@ -43,6 +43,7 @@ OUTPUT_HEADER += """
 package szerror
 
 var SzErrorTypes = map[int][]TypeIDs{
+	0:    {SzBase},
 """  # noqa: E101, W191
 
 OUTPUT_FOOTER = "}"
