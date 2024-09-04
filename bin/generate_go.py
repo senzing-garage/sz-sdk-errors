@@ -42,7 +42,11 @@ OUTPUT_HEADER += f"// Generated date: {datetime.now(timezone.utc).isoformat()}\n
 OUTPUT_HEADER += """
 package szerror
 
+/*
+Mapping between the Senzing error code and the error type.
+*/
 var SzErrorTypes = map[int][]TypeIDs{
+	0:    {SzBase},
 """  # noqa: E101, W191
 
 OUTPUT_FOOTER = "}"
