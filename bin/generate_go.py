@@ -43,10 +43,10 @@ OUTPUT_HEADER += """
 package szerror
 
 /*
-Mapping between the Senzing error code and the error type.
+Map of Senzing error code to corresponding error type.
 */
 var SzErrorTypes = map[int][]TypeIDs{
-	0:    {SzBase},
+	0:    {SzError},
 """  # noqa: E101, W191
 
 OUTPUT_FOOTER = "}"
@@ -60,26 +60,24 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
         OUTPUT_LINE = ""
         error_class = error_data.get("class")
         if error_class:
-            CLASS_VARIABLE = error_class.removesuffix("Error")
+            CLASS_VARIABLE = error_class
             match CLASS_VARIABLE:
-                case "Sz":
-                    CLASS_VARIABLE = "SzBase"
-                case "SzNotFound":
-                    CLASS_VARIABLE = "SzNotFound, SzBadInput"
-                case "SzUnknownDataSource":
-                    CLASS_VARIABLE = "SzUnknownDataSource, SzBadInput"
-                case "SzDatabaseConnectionLost":
-                    CLASS_VARIABLE = "SzDatabaseConnectionLost, SzRetryable"
-                case "SzRetryTimeoutExceeded":
-                    CLASS_VARIABLE = "SzRetryTimeoutExceeded, SzRetryable"
-                case "SzDatabase":
-                    CLASS_VARIABLE = "SzDatabase, SzUnrecoverable"
-                case "SzLicense":
-                    CLASS_VARIABLE = "SzLicense, SzUnrecoverable"
-                case "SzNotInitialized":
-                    CLASS_VARIABLE = "SzNotInitialized, SzUnrecoverable"
-                case "SzUnhandled":
-                    CLASS_VARIABLE = "SzUnhandled, SzUnrecoverable"
+                case "SzNotFoundError":
+                    CLASS_VARIABLE += ", SzBadInputError"
+                case "SzUnknownDataSourceError":
+                    CLASS_VARIABLE += ", SzBadInputError"
+                case "SzDatabaseConnectionLostError":
+                    CLASS_VARIABLE += ", SzRetryableError"
+                case "SzRetryTimeoutExceededError":
+                    CLASS_VARIABLE += ", SzRetryableError"
+                case "SzDatabaseError":
+                    CLASS_VARIABLE += ", SzUnrecoverableError"
+                case "SzLicenseError":
+                    CLASS_VARIABLE += ", SzUnrecoverableError"
+                case "SzNotInitializedError":
+                    CLASS_VARIABLE += ", SzUnrecoverableError"
+                case "SzUnhandledError":
+                    CLASS_VARIABLE += ", SzUnrecoverableError"
             OUTPUT_LINE = f"{error_number}: {{{CLASS_VARIABLE}}},"
             error_name = error_data.get("name")
             error_comment = error_data.get("comment")
