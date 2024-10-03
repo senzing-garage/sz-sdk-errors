@@ -41,10 +41,125 @@ Generated for: sz-sdk-python-abstract/src/senzing_abstract/engine_exception_map.
 
 OUTPUT_HEADER += f"Generated date: {datetime.now(timezone.utc).isoformat()}\n"
 OUTPUT_HEADER += '"""'
-OUTPUT_HEADER += "\n"
+OUTPUT_HEADER += '''
+# Metadata
 
-# noqa: E101
-OUTPUT_HEADER += """
+__all__ = [
+    "ENGINE_EXCEPTION_MAP",
+    "SzBadInputError",
+    "SzConfigurationError",
+    "SzDatabaseConnectionLostError",
+    "SzDatabaseError",
+    "SzError",
+    "SzLicenseError",
+    "SzNotFoundError",
+    "SzNotInitializedError",
+    "SzReplaceConflictError",
+    "SzRetryableError",
+    "SzRetryTimeoutExceededError",
+    "SzUnhandledError",
+    "SzUnknownDataSourceError",
+    "SzUnrecoverableError",
+]
+__version__ = "0.0.1"  # See https://www.python.org/dev/peps/pep-0396/
+__date__ = "2023-10-30"
+__updated__ = "2024-10-03"
+
+
+# -----------------------------------------------------------------------------
+# Base SzError
+# -----------------------------------------------------------------------------
+
+
+class SzError(Exception):
+    """Base exception for Sz related python code."""
+
+
+# -----------------------------------------------------------------------------
+# Category exceptions
+# - These exceptions represent categories of actions that can be taken by
+#   the calling program.
+# -----------------------------------------------------------------------------
+
+
+class SzBadInputError(SzError):
+    """The user-supplied input contained an error."""
+
+
+class SzConfigurationError(SzError):
+    """The program can provide a remedy and continue."""
+
+
+class SzReplaceConflictError(SzError):
+    """The program can provide a remedy and continue."""
+
+
+class SzRetryableError(SzError):
+    """The program can provide a remedy and continue."""
+
+
+class SzUnrecoverableError(SzError):
+    """System failure, can't continue."""
+
+
+# -----------------------------------------------------------------------------
+# Detail exceptions for SzBadInputException
+# - Processing did not complete.
+# - These exceptions are "per record" exceptions.
+# - The record should be recorded as "bad".  (logged, queued as failure)
+# - Processing may continue.
+# -----------------------------------------------------------------------------
+
+
+class SzNotFoundError(SzBadInputError):
+    """Not found"""
+
+
+class SzUnknownDataSourceError(SzBadInputError):
+    """Unknown DataSource"""
+
+
+# -----------------------------------------------------------------------------
+# Detail exceptions for SzRetryableException
+# - Processing did not complete.
+# - These exceptions may be remedied programmatically.
+# - The call to the Senzing method should be retried.
+# - Processing may continue.
+# -----------------------------------------------------------------------------
+
+
+class SzDatabaseConnectionLostError(SzRetryableError):
+    """Database connection lost"""
+
+
+class SzRetryTimeoutExceededError(SzRetryableError):
+    """Retry timeout exceeded time limit"""
+
+
+# -----------------------------------------------------------------------------
+# Detail exceptions for SzUnrecoverableException
+# - Processing did not complete.
+# - These exceptions cannot be remedied programmatically.
+# - Processing cannot continue.
+# -----------------------------------------------------------------------------
+
+
+class SzDatabaseError(SzUnrecoverableError):
+    """Database exception"""
+
+
+class SzLicenseError(SzUnrecoverableError):
+    """Licence exception"""
+
+
+class SzNotInitializedError(SzUnrecoverableError):
+    """Not initialized"""
+
+
+class SzUnhandledError(SzUnrecoverableError):
+    """Could not handle exception"""
+
+
 # -----------------------------------------------------------------------------
 # Determine Exception based on Senzing reason code.
 # Reference: https://senzing.zendesk.com/hc/en-us/articles/360026678133-Engine-Error-codes
@@ -52,7 +167,7 @@ OUTPUT_HEADER += """
 
 # fmt: off
 ENGINE_EXCEPTION_MAP = {
-"""  # noqa: E101, W191
+'''  # noqa: E101, W191
 
 
 OUTPUT_FOOTER = """}
