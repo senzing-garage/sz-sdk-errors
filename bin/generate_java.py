@@ -81,11 +81,12 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
         OUTPUT_LINE = ""
         error_class = error_data.get("class")
         if error_class:
-            OUTPUT_LINE = f"        map.put({error_number}, {error_class}.class);"
+            exception_class = error_class.replace("Error", "Exception")
+            OUTPUT_LINE = f"        map.put({error_number}, {exception_class}.class);"
             error_name = error_data.get("name")
             error_comment = error_data.get("comment")
             if error_name or error_comment:
-                pad_class_len = len(error_number) + len(error_class)
+                pad_class_len = len(error_number) + len(exception_class)
                 OUTPUT_LINE += (
                     " " * (PAD_CLASS - pad_class_len)
                 ) + f'  // {error_name:<85} "{error_comment}"'
