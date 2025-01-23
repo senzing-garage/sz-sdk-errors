@@ -38,12 +38,19 @@ build-go:
 	./bin/generate_go.py
 	gofmt -w go/szerrortypes.go
 
+
+.PHONY: build-java
+build-java:
+	./bin/generate_java.py
+
+
 .PHONY: build-python
 build-python:
 	./bin/generate_python.py
 
+
 .PHONY: build
-build: build-go build-python
+build: build-go build-java build-python
 
 # -----------------------------------------------------------------------------
 # Lint
@@ -59,6 +66,7 @@ lint:
 
 .PHONY: clean
 clean: clean-osarch-specific
+
 
 .PHONY: help
 help:
