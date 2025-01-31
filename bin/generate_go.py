@@ -62,20 +62,26 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
         if error_class:
             CLASS_VARIABLE = error_class
             match CLASS_VARIABLE:
-                case "SzNotFoundError":
-                    CLASS_VARIABLE += ", SzBadInputError"
-                case "SzUnknownDataSourceError":
-                    CLASS_VARIABLE += ", SzBadInputError"
-                case "SzDatabaseConnectionLostError":
-                    CLASS_VARIABLE += ", SzRetryableError"
-                case "SzRetryTimeoutExceededError":
-                    CLASS_VARIABLE += ", SzRetryableError"
+                case "SzConfigurationError":
+                    CLASS_VARIABLE += ", SzGeneralError"
                 case "SzDatabaseError":
                     CLASS_VARIABLE += ", SzUnrecoverableError"
+                case "SzDatabaseConnectionLostError":
+                    CLASS_VARIABLE += ", SzRetryableError"
                 case "SzLicenseError":
                     CLASS_VARIABLE += ", SzUnrecoverableError"
+                case "SzNotFoundError":
+                    CLASS_VARIABLE += ", SzBadInputError"
                 case "SzNotInitializedError":
                     CLASS_VARIABLE += ", SzUnrecoverableError"
+                case "SzReplaceConflictError":
+                    CLASS_VARIABLE += ", SzGeneralError"
+                case "SzRetryTimeoutExceededError":
+                    CLASS_VARIABLE += ", SzRetryableError"
+                case "SzSdkError":
+                    CLASS_VARIABLE += ", SzGeneralError"
+                case "SzUnknownDataSourceError":
+                    CLASS_VARIABLE += ", SzBadInputError"
                 case "SzUnhandledError":
                     CLASS_VARIABLE += ", SzUnrecoverableError"
             OUTPUT_LINE = f"{error_number}: {{{CLASS_VARIABLE}}},"
