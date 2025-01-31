@@ -25,12 +25,15 @@ The Senzing Error Hierarchy is:
 ```console
 SzError
 ├── SzBadInputError
-│   ├── SzNotFoundError
-│   └── SzUnknownDataSourceError
-├── SzConfigurationError
+│   ├── SzNotFoundError
+│   └── SzUnknownDataSourceError
+├── SzGeneralError
+│   ├── SzConfigurationError
+│   ├── SzSdkError
+│   └── SzReplaceConflictError
 ├── SzRetryableError
-│   ├── SzDatabaseConnectionLostError
-│   └── SzRetryTimeoutExceededError
+│   ├── SzDatabaseConnectionLostError
+│   └── SzRetryTimeoutExceededError
 └── SzUnrecoverableError
     ├── SzDatabaseError
     ├── SzLicenseError
