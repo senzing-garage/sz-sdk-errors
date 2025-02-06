@@ -10,7 +10,7 @@ import os
 from datetime import datetime, timezone
 
 INPUT_FILE = "szerrors.json"
-OUTPUT_FILE = "python/engine_exception_map.py"
+OUTPUT_FILE = "python/szerror.py"
 PAD_CLASS = 35
 
 
