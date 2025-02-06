@@ -511,7 +511,7 @@
     },
     "1008": {
         "code": "SENZ1008",
-        "class": "SzDatabaseError",
+        "class": "SzDatabaseTransientError",
         "name": "EAS_ERR_DEADLOCK_ERROR",
         "comment": "Deadlock Error '{0}'"
     },

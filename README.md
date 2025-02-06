@@ -33,6 +33,7 @@ SzError
 │   └── SzReplaceConflictError
 ├── SzRetryableError
 │   ├── SzDatabaseConnectionLostError
+│   ├── SzDatabaseTransientError
 │   └── SzRetryTimeoutExceededError
 └── SzUnrecoverableError
     ├── SzDatabaseError

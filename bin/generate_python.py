@@ -50,6 +50,7 @@ __all__ = [
     "SzConfigurationError",
     "SzDatabaseConnectionLostError",
     "SzDatabaseError",
+    "SzDatabaseTransientError",
     "SzError",
     "SzLicenseError",
     "SzNotFoundError",
@@ -147,6 +148,10 @@ class SzSdkError(SzGeneralError):
 
 
 class SzDatabaseConnectionLostError(SzRetryableError):
+    """Database connection lost"""
+
+
+class SzDatabaseTransientError(SzRetryableError):
     """Database connection lost"""
 
 

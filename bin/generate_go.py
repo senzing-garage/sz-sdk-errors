@@ -68,6 +68,8 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
                     CLASS_VARIABLE += ", SzUnrecoverableError"
                 case "SzDatabaseConnectionLostError":
                     CLASS_VARIABLE += ", SzRetryableError"
+                case "SzDatabaseTransientError":
+                    CLASS_VARIABLE += ", SzRetryableError"
                 case "SzLicenseError":
                     CLASS_VARIABLE += ", SzUnrecoverableError"
                 case "SzNotFoundError":
