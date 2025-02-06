@@ -10,7 +10,7 @@ import os
 from datetime import datetime, timezone
 
 INPUT_FILE = "szerrors.json"
-OUTPUT_FILE = "python/engine_exception_map.py"
+OUTPUT_FILE = "python/szerror.py"
 PAD_CLASS = 35
 
 
@@ -50,6 +50,7 @@ __all__ = [
     "SzConfigurationError",
     "SzDatabaseConnectionLostError",
     "SzDatabaseError",
+    "SzDatabaseTransientError",
     "SzError",
     "SzLicenseError",
     "SzNotFoundError",
@@ -147,6 +148,10 @@ class SzSdkError(SzGeneralError):
 
 
 class SzDatabaseConnectionLostError(SzRetryableError):
+    """Database connection lost"""
+
+
+class SzDatabaseTransientError(SzRetryableError):
     """Database connection lost"""
 
 
