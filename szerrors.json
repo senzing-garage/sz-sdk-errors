@@ -7,7 +7,7 @@
     },
     "5": {
         "code": "SENZ0005",
-        "class": "SzError",
+        "class": "SzRetryableError",
         "name": "EAS_ERR_EXCEEDED_MAX_RETRIES",
         "comment": "Exceeded the Maximum Number of Retries Allowed"
     },
