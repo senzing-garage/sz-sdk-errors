@@ -70,6 +70,7 @@ final class SzExceptionMapper {
 
 OUTPUT_FOOTER = """    }
 }
+
 """
 
 with open(INPUT_FILE, encoding="utf-8") as input_file:
