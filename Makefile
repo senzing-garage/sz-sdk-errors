@@ -33,6 +33,11 @@ hello-world: hello-world-osarch-specific
 # Build
 # -----------------------------------------------------------------------------
 
+.PHONY: build-csharp
+build-csharp:
+	./bin/generate_csharp.py
+
+
 .PHONY: build-go
 build-go:
 	./bin/generate_go.py
@@ -50,7 +55,7 @@ build-python:
 
 
 .PHONY: build
-build: build-go build-java build-python
+build: build-csharp build-go build-java build-python
 
 # -----------------------------------------------------------------------------
 # Lint
