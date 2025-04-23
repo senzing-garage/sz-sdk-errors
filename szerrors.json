@@ -7,7 +7,7 @@
     },
     "5": {
         "code": "SENZ0005",
-        "class": "SzRetryableError",
+        "class": "SzError",
         "name": "EAS_ERR_EXCEEDED_MAX_RETRIES",
         "comment": "Exceeded the Maximum Number of Retries Allowed"
     },
@@ -21,7 +21,7 @@
         "code": "SENZ0010",
         "class": "SzRetryTimeoutExceededError",
         "name": "EAS_ERR_RETRY_TIMEOUT",
-        "comment": "Retry timeout exceeded RES_ENT_ID locklist [{0}]"
+        "comment": "Retry timeout exceeded resolved entity locklist [{0}]"
     },
     "14": {
         "code": "SENZ0014",
@@ -32,8 +32,8 @@
     "18": {
         "code": "SENZ0018",
         "class": "SzError",
-        "name": "EAS_ERR_COULD_NOT_INITIALIZE_SYSTEM_PARAMETERS",
-        "comment": "Could not initialize system parameters"
+        "name": "EAS_ERR_COULD_NOT_PROCESS_INITIALIZATION_SETTINGS",
+        "comment": "Could not process initialization settings"
     },
     "19": {
         "code": "SENZ0019",
@@ -185,12 +185,6 @@
         "name": "EAS_ERR_DOCUMENT_ER_PROCESSING_FAILED",
         "comment": "Document ER processing failed"
     },
-    "44": {
-        "code": "SENZ0044",
-        "class": "SzError",
-        "name": "EAS_ERR_CHECK_ENTITY_PROCESSING_FAILED",
-        "comment": "Check entity processing failed"
-    },
     "45": {
         "code": "SENZ0045",
         "class": "SzError",
@@ -212,14 +206,14 @@
     "48": {
         "code": "SENZ0048",
         "class": "SzNotInitializedError",
-        "name": "EAS_ERR_G2_NOT_INITIALIZED",
-        "comment": "G2 is not initialized"
+        "name": "EAS_ERR_SZ_NOT_INITIALIZED",
+        "comment": "Sz is not initialized"
     },
     "50": {
         "code": "SENZ0050",
         "class": "SzNotInitializedError",
-        "name": "EAS_ERR_G2HASHER_NOT_INITIALIZED",
-        "comment": "G2Hasher is not initialized"
+        "name": "EAS_ERR_SZHASHER_NOT_INITIALIZED",
+        "comment": "SzHasher is not initialized"
     },
     "51": {
         "code": "SENZ0051",
@@ -236,13 +230,13 @@
     "53": {
         "code": "SENZ0053",
         "class": "SzBadInputError",
-        "name": "EAS_ERR_G2DIAGNOSTIC_NOT_INITIALIZED",
-        "comment": "G2Diagnostic is not initialized"
+        "name": "EAS_ERR_SZDIAGNOSTIC_NOT_INITIALIZED",
+        "comment": "SzDiagnostic is not initialized"
     },
     "54": {
         "code": "SENZ0054",
         "class": "SzDatabaseError",
-        "name": "EAS_ERR_G2_DATA_REPOSITORY_WAS_PURGED",
+        "name": "EAS_ERR_SZ_DATA_REPOSITORY_WAS_PURGED",
         "comment": "Data repository was purged"
     },
     "55": {
@@ -266,8 +260,8 @@
     "58": {
         "code": "SENZ0058",
         "class": "SzError",
-        "name": "EAS_ERR_G2_INITIALIZATION_FAILURE",
-        "comment": "G2 initialization process has failed"
+        "name": "EAS_ERR_SZ_INITIALIZATION_FAILURE",
+        "comment": "Sz initialization process has failed"
     },
     "60": {
         "code": "SENZ0060",
@@ -279,7 +273,7 @@
         "code": "SENZ0061",
         "class": "SzConfigurationError",
         "name": "EAS_ERR_AMBIGUOUS_SUPPRESSED_LIBFEAT_FELEM_MISSING",
-        "comment": "AMBIGUOUS_SUPRESSED_LIBFEAT Feature Element is not configured"
+        "comment": "AMBIGUOUS_SUPPRESSED_LIBFEAT Feature Element is not configured"
     },
     "62": {
         "code": "SENZ0062",
@@ -290,8 +284,8 @@
     "63": {
         "code": "SENZ0063",
         "class": "SzNotInitializedError",
-        "name": "EAS_ERR_G2CONFIGMGR_NOT_INITIALIZED",
-        "comment": "G2ConfigMgr is not initialized"
+        "name": "EAS_ERR_SZCONFIGMGR_NOT_INITIALIZED",
+        "comment": "SzConfigMgr is not initialized"
     },
     "64": {
         "code": "SENZ0064",
@@ -398,8 +392,8 @@
     "87": {
         "code": "SENZ0087",
         "class": "SzUnhandledError",
-        "name": "EAS_ERR_SRD_EXCEPTION",
-        "comment": "SRD Exception '{0}'"
+        "name": "EAS_ERR_SZ_EXCEPTION",
+        "comment": "Sz Exception '{0}'"
     },
     "88": {
         "code": "SENZ0088",
@@ -434,7 +428,7 @@
     "93": {
         "code": "SENZ0093",
         "class": "SzError",
-        "name": "EAS_ERR_CONFUSED_ENTTIY_FELEM_MISSING",
+        "name": "EAS_ERR_CONFUSED_ENTITY_FELEM_MISSING",
         "comment": "YESNO_FLAG Feature Element is not configured"
     },
     "94": {
@@ -446,14 +440,26 @@
     "95": {
         "code": "SENZ0095",
         "class": "SzError",
-        "name": "EAS_ERR_SUPRESSED_RELATIONSHIP_FTYPE_ID_FELEM_MISSING",
-        "comment": "SUPRESSED_RELATIONSHIP_FTYPE_ID Feature Element is not configured"
+        "name": "EAS_ERR_SUPPRESSED_RELATIONSHIP_FTYPE_ID_FELEM_MISSING",
+        "comment": "SUPPRESSED_RELATIONSHIP_FTYPE_ID Feature Element is not configured"
     },
     "96": {
         "code": "SENZ0096",
         "class": "SzError",
-        "name": "EAS_ERR_SUPRESSED_RELATIONSHIP_CONNECTING_FTYPE_ID_FELEM_MISSING",
-        "comment": "SUPRESSED_RELATIONSHIP_CONNECTING_FTYPE_ID Feature Element is not configured"
+        "name": "EAS_ERR_SUPPRESSED_RELATIONSHIP_CONNECTING_FTYPE_ID_FELEM_MISSING",
+        "comment": "SUPPRESSED_RELATIONSHIP_CONNECTING_FTYPE_ID Feature Element is not configured"
+    },
+    "97": {
+        "code": "SENZ0097",
+        "class": "SzError",
+        "name": "EAS_ERR_ORPHANED_ENTITY_FTYPE_MISSING",
+        "comment": "ORPHANED_ENTITY Feature Type is not configured"
+    },
+    "98": {
+        "code": "SENZ0098",
+        "class": "SzError",
+        "name": "EAS_ERR_ORPHANED_ENTITY_FELEM_MISSING",
+        "comment": "VALUE Feature Element is not configured"
     },
     "999": {
         "code": "SENZ0999",
@@ -975,7 +981,7 @@
         "code": "SENZ2114",
         "class": "SzConfigurationError",
         "name": "EAS_ERR_INVALID_FTYPE_SCORESET",
-        "comment": "Cannot set score for invalid FTYPE_ID [{0}]"
+        "comment": "Cannot set score for invalid feature type ID [{0}]"
     },
     "2116": {
         "code": "SENZ2116",
@@ -1013,11 +1019,17 @@
         "name": "EAS_ERR_CFUNC_CONFIGURED_WITH_NO_CFRTN",
         "comment": "CFG_CFUNC [{0}] feature type [{1}] configured without any corresponding return values in CFG_CFRTN"
     },
+    "2124": {
+        "code": "SENZ2124",
+        "class": "SzError",
+        "name": "EAS_ERR_FEATURE_CONFIGURED_WITH_ONLY_DERIVED_FELEMS",
+        "comment": "Feature [{0}] configured with only derived felems"
+    },
     "2131": {
         "code": "SENZ2131",
         "class": "SzConfigurationError",
         "name": "EAS_ERR_OBS_ENT_NOT_FOUND",
-        "comment": "Requested resolution of OBS_ENT_ID that is not loaded OBS_ENT_ID[{0}]"
+        "comment": "Requested resolution of observed entity that is not loaded:  OBS_ENT_ID[{0}]"
     },
     "2135": {
         "code": "SENZ2135",
@@ -1047,7 +1059,7 @@
         "code": "SENZ2139",
         "class": "SzConfigurationError",
         "name": "EAS_ERR_DSRC_INTEREST_CONFIGURED_WITH_INVALID_DSRCID",
-        "comment": "Data Source Interest configured with invalid Data Source ID DSRC_ID[{0}]"
+        "comment": "Data Source Interest configured with invalid Data Source ID [{0}]"
     },
     "2207": {
         "code": "SENZ2207",
@@ -1665,7 +1677,7 @@
         "code": "SENZ7220",
         "class": "SzConfigurationError",
         "name": "EAS_ERR_NO_CONFIG_REGISTERED_IN_DATASTORE",
-        "comment": "No engine configuration registered in datastore (see https://senzing.zendesk.com/hc/en-us/articles/360036587313)."
+        "comment": "No engine configuration registered in datastore"
     },
     "7221": {
         "code": "SENZ7221",
@@ -1934,55 +1946,55 @@
     "8520": {
         "code": "SENZ8520",
         "class": "SzError",
-        "name": "EAS_ERR_SALT_G2SS_INIT_FAILED",
+        "name": "EAS_ERR_SALT_SZSS_INIT_FAILED",
         "comment": "Secure Store initialization failed."
     },
     "8521": {
         "code": "SENZ8521",
         "class": "SzError",
-        "name": "EAS_ERR_SALT_G2SS_TOKEN_MUST_BE_INIT",
+        "name": "EAS_ERR_SALT_SZSS_TOKEN_MUST_BE_INIT",
         "comment": "Hashing with a named salt requires the Secure Store to be initialized."
     },
     "8522": {
         "code": "SENZ8522",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_SALT_G2SS_SOPIN_NOT_VALID",
+        "name": "EAS_ERR_SALT_SZSS_SOPIN_NOT_VALID",
         "comment": "The Security Officer (SO) PIN is not correct."
     },
     "8524": {
         "code": "SENZ8524",
         "class": "SzError",
-        "name": "EAS_ERR_SALT_G2SS_INIT_UNKNOWN_EXCEPTION",
+        "name": "EAS_ERR_SALT_SZSS_INIT_UNKNOWN_EXCEPTION",
         "comment": "Secure Store initialization failed with an unrecognized exception"
     },
     "8525": {
         "code": "SENZ8525",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_SALT_G2SS_REQUIRED_FOR_LOAD",
+        "name": "EAS_ERR_SALT_SZSS_REQUIRED_FOR_LOAD",
         "comment": "Secure Store is required to load salt"
     },
     "8526": {
         "code": "SENZ8526",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_SALT_G2SS_REQUIRED_FOR_GENERATE",
+        "name": "EAS_ERR_SALT_SZSS_REQUIRED_FOR_GENERATE",
         "comment": "Secure Store is required to generate salt"
     },
     "8527": {
         "code": "SENZ8527",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_SALT_G2SS_REQUIRED_FOR_IMPORT",
+        "name": "EAS_ERR_SALT_SZSS_REQUIRED_FOR_IMPORT",
         "comment": "Secure Store is required to import salt"
     },
     "8528": {
         "code": "SENZ8528",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_SALT_G2SS_REQUIRED_FOR_EXPORT",
+        "name": "EAS_ERR_SALT_SZSS_REQUIRED_FOR_EXPORT",
         "comment": "Secure Store is required to export salt"
     },
     "8529": {
         "code": "SENZ8529",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_SALT_G2SS_REQUIRED_FOR_DELETE",
+        "name": "EAS_ERR_SALT_SZSS_REQUIRED_FOR_DELETE",
         "comment": "Secure Store is required to delete salt"
     },
     "8530": {
@@ -1994,19 +2006,19 @@
     "8536": {
         "code": "SENZ8536",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_SALT_G2SS_REQUIRED_FOR_LEGACY",
+        "name": "EAS_ERR_SALT_SZSS_REQUIRED_FOR_LEGACY",
         "comment": "Secure Store is required to add a legacy salt"
     },
     "8538": {
         "code": "SENZ8538",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_SALT_G2SS_REQUIRED_FOR_METHOD",
+        "name": "EAS_ERR_SALT_SZSS_REQUIRED_FOR_METHOD",
         "comment": "Secure Store is required to change hashing method"
     },
     "8539": {
         "code": "SENZ8539",
         "class": "SzError",
-        "name": "EAS_ERR_SALT_G2SS_ERROR_CHANGING_METHOD",
+        "name": "EAS_ERR_SALT_SZSS_ERROR_CHANGING_METHOD",
         "comment": "Secure Store error changing hashing method"
     },
     "8540": {
@@ -2264,283 +2276,283 @@
     "9250": {
         "code": "SENZ9250",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_INVALID_LIB",
+        "name": "EAS_ERR_SZSS_INVALID_LIB",
         "comment": "Invalid ({1}) Secure Store plug-in library: {0}"
     },
     "9251": {
         "code": "SENZ9251",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_INVALID_URL",
+        "name": "EAS_ERR_SZSS_INVALID_URL",
         "comment": "Invalid Secure Store URL: {0}"
     },
     "9252": {
         "code": "SENZ9252",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_INVALID_PIN",
+        "name": "EAS_ERR_SZSS_INVALID_PIN",
         "comment": "Invalid Secure Store credential specification: {0}"
     },
     "9253": {
         "code": "SENZ9253",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_TOKEN_INIT_FAILED",
+        "name": "EAS_ERR_SZSS_TOKEN_INIT_FAILED",
         "comment": "Secure Store token initialization failed: {0}."
     },
     "9254": {
         "code": "SENZ9254",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_TOKEN_UNINITIALIZED",
+        "name": "EAS_ERR_SZSS_TOKEN_UNINITIALIZED",
         "comment": "Cannot open a Secure Store session when the token is uninitialized."
     },
     "9255": {
         "code": "SENZ9255",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_USER_PIN_UNINITIALIZED",
+        "name": "EAS_ERR_SZSS_USER_PIN_UNINITIALIZED",
         "comment": "Secure Store credential is uninitialized."
     },
     "9256": {
         "code": "SENZ9256",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_SESSION_OPEN",
+        "name": "EAS_ERR_SZSS_SESSION_OPEN",
         "comment": "Cannot open a Secure Store session when one is already open."
     },
     "9257": {
         "code": "SENZ9257",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_NO_SESSION",
+        "name": "EAS_ERR_SZSS_NO_SESSION",
         "comment": "Cannot use Secure Store without a session."
     },
     "9258": {
         "code": "SENZ9258",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_SESSION_OPEN_FAILED",
+        "name": "EAS_ERR_SZSS_SESSION_OPEN_FAILED",
         "comment": "Secure Store session could not be opened: {0}."
     },
     "9259": {
         "code": "SENZ9259",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_ADMIN_LOGIN_FAILED",
+        "name": "EAS_ERR_SZSS_ADMIN_LOGIN_FAILED",
         "comment": "Secure Store admin login failed: {0}."
     },
     "9260": {
         "code": "SENZ9260",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_USER_LOGIN_FAILED",
+        "name": "EAS_ERR_SZSS_USER_LOGIN_FAILED",
         "comment": "Secure Store user login failed: {0}."
     },
     "9261": {
         "code": "SENZ9261",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_PKCS11_ERROR",
+        "name": "EAS_ERR_SZSS_PKCS11_ERROR",
         "comment": "Secure Store function failed: {0}"
     },
     "9264": {
         "code": "SENZ9264",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_LOGOUT_FAILED",
+        "name": "EAS_ERR_SZSS_LOGOUT_FAILED",
         "comment": "Secure Store logout failed: {0}."
     },
     "9265": {
         "code": "SENZ9265",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_NEED_RW_SESSION",
+        "name": "EAS_ERR_SZSS_NEED_RW_SESSION",
         "comment": "Secure Store session must be read/write."
     },
     "9266": {
         "code": "SENZ9266",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_UNABLE_TO_VERIFY_KEY",
+        "name": "EAS_ERR_SZSS_UNABLE_TO_VERIFY_KEY",
         "comment": "Secure Store key does not meet requirements."
     },
     "9267": {
         "code": "SENZ9267",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_UNABLE_TO_CREATE_KEY",
+        "name": "EAS_ERR_SZSS_UNABLE_TO_CREATE_KEY",
         "comment": "Secure Store key creation failed."
     },
     "9268": {
         "code": "SENZ9268",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_UNABLE_TO_CHANGE_PIN",
+        "name": "EAS_ERR_SZSS_UNABLE_TO_CHANGE_PIN",
         "comment": "Secure Store password change failed: {0}."
     },
     "9269": {
         "code": "SENZ9269",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_INVALID_OLD_CREDENTIAL",
+        "name": "EAS_ERR_SZSS_INVALID_OLD_CREDENTIAL",
         "comment": "Secure Store old credential is invalid."
     },
     "9270": {
         "code": "SENZ9270",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_INVALID_NEW_CREDENTIAL",
+        "name": "EAS_ERR_SZSS_INVALID_NEW_CREDENTIAL",
         "comment": "Secure Store new credential is invalid."
     },
     "9271": {
         "code": "SENZ9271",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_OUT_OF_MEMORY",
+        "name": "EAS_ERR_SZSS_OUT_OF_MEMORY",
         "comment": "Secure Store out of memory."
     },
     "9272": {
         "code": "SENZ9272",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_FIND_INIT_FAILED",
+        "name": "EAS_ERR_SZSS_FIND_INIT_FAILED",
         "comment": "Secure Store object locating failed: {0}."
     },
     "9273": {
         "code": "SENZ9273",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_FIND_FAILED",
+        "name": "EAS_ERR_SZSS_FIND_FAILED",
         "comment": "Secure Store object find failed: {0}."
     },
     "9274": {
         "code": "SENZ9274",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_CRYPTO_SETUP_FAILED",
+        "name": "EAS_ERR_SZSS_CRYPTO_SETUP_FAILED",
         "comment": "Secure Store setup of encryption failed: {0}."
     },
     "9275": {
         "code": "SENZ9275",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_ENCRYPT_START_FAILED",
+        "name": "EAS_ERR_SZSS_ENCRYPT_START_FAILED",
         "comment": "Secure Store unable to start encryption: {0}."
     },
     "9276": {
         "code": "SENZ9276",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_ENCRYPT_SIZE_FAILED",
+        "name": "EAS_ERR_SZSS_ENCRYPT_SIZE_FAILED",
         "comment": "Secure Store unable to get the size of encrypted data: {0}."
     },
     "9277": {
         "code": "SENZ9277",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_ENCRYPT_FAILED",
+        "name": "EAS_ERR_SZSS_ENCRYPT_FAILED",
         "comment": "Secure Store encryption failed: {0}."
     },
     "9278": {
         "code": "SENZ9278",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_DECRYPT_START_FAILED",
+        "name": "EAS_ERR_SZSS_DECRYPT_START_FAILED",
         "comment": "Secure Store unable to start decryption: {0}."
     },
     "9279": {
         "code": "SENZ9279",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_DECRYPT_FAILED",
+        "name": "EAS_ERR_SZSS_DECRYPT_FAILED",
         "comment": "Secure Store decryption failed: {0}."
     },
     "9280": {
         "code": "SENZ9280",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_OBJECT_SAVE_FAILED",
+        "name": "EAS_ERR_SZSS_OBJECT_SAVE_FAILED",
         "comment": "Secure Store unable to save object: {0}."
     },
     "9281": {
         "code": "SENZ9281",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_OBJECT_DELETE_FAILED",
+        "name": "EAS_ERR_SZSS_OBJECT_DELETE_FAILED",
         "comment": "Secure Store unable to delete object: {0}."
     },
     "9282": {
         "code": "SENZ9282",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_OBJECT_CHANGE_FAILED",
+        "name": "EAS_ERR_SZSS_OBJECT_CHANGE_FAILED",
         "comment": "Secure Store unable to modify object: {0}."
     },
     "9283": {
         "code": "SENZ9283",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_UNINITIALIZED",
+        "name": "EAS_ERR_SZSS_UNINITIALIZED",
         "comment": "Secure Store has not been initialized"
     },
     "9284": {
         "code": "SENZ9284",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_INVALID_SLOT_ID",
+        "name": "EAS_ERR_SZSS_INVALID_SLOT_ID",
         "comment": "Can not obtain info on specified slot. Possibly invalid slot ID specified in Secure Store URL: {0}"
     },
     "9285": {
         "code": "SENZ9285",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_NO_TOKEN_IN_SLOT",
+        "name": "EAS_ERR_SZSS_NO_TOKEN_IN_SLOT",
         "comment": "No security token present in slot specified by Secure Store URL: slot ID = {0}"
     },
     "9286": {
         "code": "SENZ9286",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_TOKEN_NOT_FOUND",
+        "name": "EAS_ERR_SZSS_TOKEN_NOT_FOUND",
         "comment": "Can not obtain info for security token. Possibly invalid token label and/or slot ID specified in Secure Store URL: {0}"
     },
     "9287": {
         "code": "SENZ9287",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_TOKEN_IMPL_ERROR",
+        "name": "EAS_ERR_SZSS_TOKEN_IMPL_ERROR",
         "comment": "An internal error occurred in the security token implementation library: Return Code = {0}"
     },
     "9288": {
         "code": "SENZ9288",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_USER_PIN_PROMPT_FAILED",
+        "name": "EAS_ERR_SZSS_USER_PIN_PROMPT_FAILED",
         "comment": "Was unable to prompt user for security token authentication."
     },
     "9289": {
         "code": "SENZ9289",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_LABEL_CHANGED_SINCE_CONFIG_INIT",
+        "name": "EAS_ERR_SZSS_LABEL_CHANGED_SINCE_CONFIG_INIT",
         "comment": "Secure Store has been reconfigured since loading."
     },
     "9290": {
         "code": "SENZ9290",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_OBJECT_NOT_FOUND",
+        "name": "EAS_ERR_SZSS_OBJECT_NOT_FOUND",
         "comment": "Secure Store does not have an object called {0}."
     },
     "9292": {
         "code": "SENZ9292",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_NO_PASSWORD",
+        "name": "EAS_ERR_SZSS_NO_PASSWORD",
         "comment": "No password supplied"
     },
     "9293": {
         "code": "SENZ9293",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_NO_SEC_STORE_PREFIX",
+        "name": "EAS_ERR_SZSS_NO_SEC_STORE_PREFIX",
         "comment": "Secure Store expects a different format (starting with {0}) when a password is supplied"
     },
     "9295": {
         "code": "SENZ9295",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_NO_DATA_OBJECTS",
+        "name": "EAS_ERR_SZSS_NO_DATA_OBJECTS",
         "comment": "There are no Secure Store objects stored on the token"
     },
     "9296": {
         "code": "SENZ9296",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_SEC_STORE_ARCHIVE_BAD",
+        "name": "EAS_ERR_SZSS_SEC_STORE_ARCHIVE_BAD",
         "comment": "The exported archive appears to be corrupted around object {0}"
     },
     "9297": {
         "code": "SENZ9297",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_FILE_NOT_FOUND",
+        "name": "EAS_ERR_SZSS_FILE_NOT_FOUND",
         "comment": "Secure Store failed to open {0}"
     },
     "9298": {
         "code": "SENZ9298",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_FILE_CONTENTS_BAD",
+        "name": "EAS_ERR_SZSS_FILE_CONTENTS_BAD",
         "comment": "Secure Store contents of {0} not usable."
     },
     "9299": {
         "code": "SENZ9299",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_CLASS_NOT_INIT",
+        "name": "EAS_ERR_SZSS_CLASS_NOT_INIT",
         "comment": "Secure Store internal error."
     },
     "9300": {
         "code": "SENZ9300",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_PASSWORD_CHECK_ERROR",
+        "name": "EAS_ERR_SZSS_PASSWORD_CHECK_ERROR",
         "comment": "Secure Store internal error ({0}) checking password."
     },
     "9301": {
@@ -2582,37 +2594,37 @@
     "9406": {
         "code": "SENZ9406",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_SESSION_MUST_NOT_BE_OPEN",
+        "name": "EAS_ERR_SZSS_SESSION_MUST_NOT_BE_OPEN",
         "comment": "Secure Store cannot fetch a value with sync if a session is already open."
     },
     "9408": {
         "code": "SENZ9408",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_PASSWORD_INADEQUATE",
+        "name": "EAS_ERR_SZSS_PASSWORD_INADEQUATE",
         "comment": "The provided password is not strong enough: {0}"
     },
     "9409": {
         "code": "SENZ9409",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_FUNCTION_LIST_NOT_SET",
+        "name": "EAS_ERR_SZSS_FUNCTION_LIST_NOT_SET",
         "comment": "The security token interface is not yet set"
     },
     "9410": {
         "code": "SENZ9410",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_PKCS_INIT_FAILED",
+        "name": "EAS_ERR_SZSS_PKCS_INIT_FAILED",
         "comment": "Initializing token driver failed {0}"
     },
     "9411": {
         "code": "SENZ9411",
         "class": "SzError",
-        "name": "EAS_ERR_G2SS_PKCS_FINAL_FAILED",
+        "name": "EAS_ERR_SZSS_PKCS_FINAL_FAILED",
         "comment": "Finalizing token driver failed {0}"
     },
     "9413": {
         "code": "SENZ9413",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_G2SS_INCORRECT_PASSWORD",
+        "name": "EAS_ERR_SZSS_INCORRECT_PASSWORD",
         "comment": "The export file password appears to be incorrect."
     },
     "9414": {
