@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog], [markdownlint],
 and this project adheres to [Semantic Versioning].
 
+## [0.1.8] - 2025-04-23
+
+### Changed in 0.1.8
+
+- Update variable names
+
 ### Changed in 0.1.7
 
 - Added generator for C#
