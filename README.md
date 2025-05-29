@@ -29,8 +29,8 @@ SzError
 │   └── SzUnknownDataSourceError
 ├── SzGeneralError
 │   ├── SzConfigurationError
-│   ├── SzSdkError
-│   └── SzReplaceConflictError
+│   ├── SzReplaceConflictError
+│   └── SzSdkError
 ├── SzRetryableError
 │   ├── SzDatabaseConnectionLostError
 │   ├── SzDatabaseTransientError

@@ -62,30 +62,38 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
         if error_class:
             CLASS_VARIABLE = error_class
             match CLASS_VARIABLE:
+                case "SzBadInputError":
+                    CLASS_VARIABLE += ", SzError"
                 case "SzConfigurationError":
-                    CLASS_VARIABLE += ", SzGeneralError"
+                    CLASS_VARIABLE += ", SzGeneralError, SzError"
                 case "SzDatabaseError":
-                    CLASS_VARIABLE += ", SzUnrecoverableError"
+                    CLASS_VARIABLE += ", SzUnrecoverableError, SzError"
                 case "SzDatabaseConnectionLostError":
-                    CLASS_VARIABLE += ", SzRetryableError"
+                    CLASS_VARIABLE += ", SzRetryableError, SzError"
                 case "SzDatabaseTransientError":
-                    CLASS_VARIABLE += ", SzRetryableError"
+                    CLASS_VARIABLE += ", SzRetryableError, SzError"
+                case "SzGeneralError":
+                    CLASS_VARIABLE += ", SzError"
                 case "SzLicenseError":
-                    CLASS_VARIABLE += ", SzUnrecoverableError"
+                    CLASS_VARIABLE += ", SzUnrecoverableError, SzError"
                 case "SzNotFoundError":
-                    CLASS_VARIABLE += ", SzBadInputError"
+                    CLASS_VARIABLE += ", SzBadInputError, SzError"
                 case "SzNotInitializedError":
-                    CLASS_VARIABLE += ", SzUnrecoverableError"
+                    CLASS_VARIABLE += ", SzUnrecoverableError, SzError"
                 case "SzReplaceConflictError":
-                    CLASS_VARIABLE += ", SzGeneralError"
+                    CLASS_VARIABLE += ", SzGeneralError, SzError"
+                case "SzRetryableError":
+                    CLASS_VARIABLE += ", SzError"
                 case "SzRetryTimeoutExceededError":
-                    CLASS_VARIABLE += ", SzRetryableError"
+                    CLASS_VARIABLE += ", SzRetryableError, SzError"
                 case "SzSdkError":
-                    CLASS_VARIABLE += ", SzGeneralError"
+                    CLASS_VARIABLE += ", SzGeneralError, SzError"
                 case "SzUnknownDataSourceError":
-                    CLASS_VARIABLE += ", SzBadInputError"
+                    CLASS_VARIABLE += ", SzBadInputError, SzError"
                 case "SzUnhandledError":
-                    CLASS_VARIABLE += ", SzUnrecoverableError"
+                    CLASS_VARIABLE += ", SzUnrecoverableError, SzError"
+                case "SzUnrecoverableError":
+                    CLASS_VARIABLE += ", SzError"
             OUTPUT_LINE = f"{error_number}: {{{CLASS_VARIABLE}}},"
             error_name = error_data.get("name")
             error_comment = error_data.get("comment")
