@@ -207,7 +207,7 @@
         "code": "SENZ0048",
         "class": "SzNotInitializedError",
         "name": "EAS_ERR_SZ_NOT_INITIALIZED",
-        "comment": "Sz is not initialized"
+        "comment": "API is not initialized"
     },
     "50": {
         "code": "SENZ0050",
@@ -229,7 +229,7 @@
     },
     "53": {
         "code": "SENZ0053",
-        "class": "SzBadInputError",
+        "class": "SzNotInitializedError",
         "name": "EAS_ERR_SZDIAGNOSTIC_NOT_INITIALIZED",
         "comment": "SzDiagnostic is not initialized"
     },
@@ -1673,6 +1673,12 @@
         "name": "EAS_ERR_DB_CLUSTER_DOES_NOT_EXIST",
         "comment": "Cluster [{0}] does not exist"
     },
+    "7219": {
+        "code": "SENZ7219",
+        "class": "SzError",
+        "name": "EAS_ERR_DB_TYPE_DOES_NOT_SUPPORT_EMBEDDING_DATA_TYPES",
+        "comment": "Database type [{0}] does not support embedding data types"
+    },
     "7220": {
         "code": "SENZ7220",
         "class": "SzConfigurationError",
@@ -1772,7 +1778,7 @@
     "7239": {
         "code": "SENZ7239",
         "class": "SzConfigurationError",
-        "name": "EAS_ERR_INVALID_GENERIC_THRESHOLD_CANDIDATE_CAP",
+        "name": "EAS_ERR_INVALID_GENERIC_THRESHOLD_CAP",
         "comment": "Invalid generic threshold {0} cap [{1}] for [GPLAN_ID[{2}], BEHAVIOR[{3}], FTYPE_ID[{4}]]."
     },
     "7240": {
@@ -1899,7 +1905,7 @@
         "code": "SENZ8503",
         "class": "SzError",
         "name": "EAS_ERR_SALT_DIGEST_CONTEXT_INIT_FAILED",
-        "comment": "Failed {0} to initialise a digest context."
+        "comment": "Failed {0} to initialize a digest context."
     },
     "8504": {
         "code": "SENZ8504",
@@ -2073,7 +2079,7 @@
         "code": "SENZ8593",
         "class": "SzError",
         "name": "EAS_ERR_SALT_HMAC_CONTEXT_INIT_FAILED",
-        "comment": "Failed {0} to initialise an HMAC context."
+        "comment": "Failed {0} to initialize an HMAC context."
     },
     "8594": {
         "code": "SENZ8594",
