@@ -209,12 +209,6 @@
         "name": "EAS_ERR_SZ_NOT_INITIALIZED",
         "comment": "API is not initialized"
     },
-    "50": {
-        "code": "SENZ0050",
-        "class": "SzNotInitializedError",
-        "name": "EAS_ERR_SZHASHER_NOT_INITIALIZED",
-        "comment": "SzHasher is not initialized"
-    },
     "51": {
         "code": "SENZ0051",
         "class": "SzBadInputError",
@@ -226,12 +220,6 @@
         "class": "SzError",
         "name": "EAS_ERR_UNKNOWN_RELATIONSHIP_ID_VALUE",
         "comment": "Unknown relationship ID value '{0}'"
-    },
-    "53": {
-        "code": "SENZ0053",
-        "class": "SzNotInitializedError",
-        "name": "EAS_ERR_SZDIAGNOSTIC_NOT_INITIALIZED",
-        "comment": "SzDiagnostic is not initialized"
     },
     "54": {
         "code": "SENZ0054",
@@ -280,12 +268,6 @@
         "class": "SzConfigurationError",
         "name": "EAS_ERR_AMBIGUOUS_TYPE_FELEM_MISSING",
         "comment": "AMBIGUOUS_TYPE Feature Element is not configured"
-    },
-    "63": {
-        "code": "SENZ0063",
-        "class": "SzNotInitializedError",
-        "name": "EAS_ERR_SZCONFIGMGR_NOT_INITIALIZED",
-        "comment": "SzConfigMgr is not initialized"
     },
     "64": {
         "code": "SENZ0064",
