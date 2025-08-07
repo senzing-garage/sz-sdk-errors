@@ -2249,6 +2249,18 @@
         "name": "EAS_ERR_FTYPE_CONFIGURED_TO_BE_HASHED",
         "comment": "FType configured to be hashed, but no hashable data found.  FTYPE_ID[{0}] FTYPE_CODE[{1}]"
     },
+    "9225": {
+        "code": "SENZ9225",
+        "class": "SzConfigurationError",
+        "name": "EAS_ERR_EMBEDDING_CANDIDATE_LICENSE_DISALLOWS",
+        "comment": "Embedding FType [{0}] configured for candidates but not allowed by license."
+    },
+    "9226": {
+        "code": "SENZ9226",
+        "class": "SzBadInputError",
+        "name": "EAS_ERR_FORCED_CANDIDATES_LICENSE_DISALLOWS",
+        "comment": "Forced candidates are not allowed by license."
+    },
     "9228": {
         "code": "SENZ9228",
         "class": "SzConfigurationError",
