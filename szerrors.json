@@ -2253,7 +2253,7 @@
         "code": "SENZ9225",
         "class": "SzConfigurationError",
         "name": "EAS_ERR_EMBEDDING_CANDIDATE_LICENSE_DISALLOWS",
-        "comment": "Embeddng FType [{0}] configured for candidates but not allowed by license."
+        "comment": "Embedding FType [{0}] configured for candidates but not allowed by license."
     },
     "9226": {
         "code": "SENZ9226",
