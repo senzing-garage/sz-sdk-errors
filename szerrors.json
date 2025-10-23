@@ -207,7 +207,7 @@
         "code": "SENZ0048",
         "class": "SzNotInitializedError",
         "name": "EAS_ERR_SZ_NOT_INITIALIZED",
-        "comment": "API is not initialized"
+        "comment": "SDK is not initialized"
     },
     "51": {
         "code": "SENZ0051",
@@ -220,6 +220,12 @@
         "class": "SzError",
         "name": "EAS_ERR_UNKNOWN_RELATIONSHIP_ID_VALUE",
         "comment": "Unknown relationship ID value '{0}'"
+    },
+    "53": {
+        "code": "SENZ0053",
+        "class": "SzNotInitializedError",
+        "name": "EAS_ERR_RECORD_ID_REQUIRED",
+        "comment": "RECORD_ID must be provided"
     },
     "54": {
         "code": "SENZ0054",
@@ -1042,6 +1048,12 @@
         "class": "SzConfigurationError",
         "name": "EAS_ERR_DSRC_INTEREST_CONFIGURED_WITH_INVALID_DSRCID",
         "comment": "Data Source Interest configured with invalid Data Source ID [{0}]"
+    },
+    "2205": {
+        "code": "SENZ2205",
+        "class": "SzConfigurationError",
+        "name": "EAS_ERR_FTYPE_ID_DOES_NOT_EXIST",
+        "comment": "Feature type ID [{0}] does not exist."
     },
     "2206": {
         "code": "SENZ2206",
