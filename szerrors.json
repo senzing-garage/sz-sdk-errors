@@ -2285,6 +2285,12 @@
         "name": "EAS_ERR_UNEXPECTED_SALT_CHECKSUM_LIST",
         "comment": "The SALT checksum on the Observation does not match the EXPECTED SALT checksum: EXPECTED=[{0}] Observation=[{1}]"
     },
+    "9229": {
+        "code": "SENZ9229",
+        "class": "SzError",
+        "name": "EAS_ERR_SQLITE_VERSION_TOO_OLD",
+        "comment": "SQLite version {0} or higher is required (found {1}). RETURNING clause support is needed for efficient redo processing."
+    },
     "9240": {
         "code": "SENZ9240",
         "class": "SzConfigurationError",
