@@ -1631,6 +1631,12 @@
         "name": "EAS_ERR_JSON_PARSING_FAILURE_OBJECT_HAS_DUPLICATE_KEYS",
         "comment": "Json object has duplicate keys."
     },
+    "3124": {
+        "code": "SENZ3124",
+        "class": "SzError",
+        "name": "EAS_ERR_JSON_DATA_IS_NULL",
+        "comment": "JSON record data cannot be null."
+    },
     "3131": {
         "code": "SENZ3131",
         "class": "SzBadInputError",
@@ -2692,5 +2698,11 @@
         "class": "SzConfigurationError",
         "name": "EAS_ERR_CALC_CONFIGCHKSUM_AND_PARAMSTORE_CONFIGCHKSUM_DONT_MATCH",
         "comment": "The calculated configuration checksum [{0}] does not match the CONFIGURATION_CHECKSUM value in the parameter store [{1}]."
+    },
+    "9804": {
+        "code": "SENZ9804",
+        "class": "SzError",
+        "name": "EAS_ERR_NULL_PARAMETER",
+        "comment": "Invalid null parameter [{1}] passed to function [{0}]"
     }
 }
