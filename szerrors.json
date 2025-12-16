@@ -209,6 +209,18 @@
         "name": "EAS_ERR_SZ_NOT_INITIALIZED",
         "comment": "SDK is not initialized"
     },
+    "49": {
+        "code": "SENZ0049",
+        "class": "SzNotInitializedError",
+        "name": "EAS_ERR_SZCORE_ALREADY_INITIALIZED",
+        "comment": "SzCore is already initialized - call SzCore::destroy() first"
+    },
+    "50": {
+        "code": "SENZ0050",
+        "class": "SzNotInitializedError",
+        "name": "EAS_ERR_SZCORE_NOT_INITIALIZED",
+        "comment": "SzCore is not initialized - call SzCore::init() first"
+    },
     "51": {
         "code": "SENZ0051",
         "class": "SzBadInputError",
@@ -2704,5 +2716,17 @@
         "class": "SzError",
         "name": "EAS_ERR_NULL_PARAMETER",
         "comment": "Invalid null parameter [{1}] passed to function [{0}]"
+    },
+    "9805": {
+        "code": "SENZ9805",
+        "class": "SzError",
+        "name": "EAS_ERR_ADDRESS_INTERPRETER_NOT_INITIALIZED",
+        "comment": "AddressInterpreter not initialized - initializeAI() must be called before primeAddressInterpretter()"
+    },
+    "9806": {
+        "code": "SENZ9806",
+        "class": "SzError",
+        "name": "EAS_ERR_GNR_RESOURCE_HANDLE_NOT_INITIALIZED",
+        "comment": "GNRResourceHandle not initialized - primeGNRResources() must be called first"
     }
 }
