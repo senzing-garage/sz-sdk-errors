@@ -2721,7 +2721,7 @@
         "code": "SENZ9805",
         "class": "SzError",
         "name": "EAS_ERR_ADDRESS_INTERPRETER_NOT_INITIALIZED",
-        "comment": "AddressInterpreter not initialized - initializeAI() must be called before primeAddressInterpretter()"
+        "comment": "AddressInterpreter not initialized - initializeAI() must be called before primeAddressInterpreter()"
     },
     "9806": {
         "code": "SENZ9806",
