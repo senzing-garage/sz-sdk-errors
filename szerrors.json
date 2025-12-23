@@ -1649,6 +1649,12 @@
         "name": "EAS_ERR_JSON_DATA_IS_NULL",
         "comment": "JSON record data cannot be null."
     },
+    "3125": {
+        "code": "SENZ3125",
+        "class": "SzError",
+        "name": "EAS_ERR_JSON_RECORD_DATA_MUST_BE_OBJECT",
+        "comment": "JSON record data must be an object, not an array."
+    },
     "3131": {
         "code": "SENZ3131",
         "class": "SzBadInputError",
