@@ -465,7 +465,7 @@
         "code": "SENZ0999",
         "class": "SzLicenseError",
         "name": "EAS_ERR_LICENSE_HAS_EXPIRED",
-        "comment": "License has expired"
+        "comment": "License has expired. {0}"
     },
     "1000": {
         "code": "SENZ1000",
@@ -2193,7 +2193,7 @@
         "code": "SENZ9000",
         "class": "SzLicenseError",
         "name": "EAS_LIMIT_MAX_OBS_ENT",
-        "comment": "LIMIT: Maximum number of records ingested: {0}"
+        "comment": "LIMIT: Maximum number of records ingested: {0}. {1}"
     },
     "9107": {
         "code": "SENZ9107",
