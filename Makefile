@@ -30,6 +30,47 @@ default: help
 hello-world: hello-world-osarch-specific
 
 # -----------------------------------------------------------------------------
+# Dependency management
+# -----------------------------------------------------------------------------
+
+.PHONY: venv
+venv: venv-osarch-specific
+
+
+.PHONY: dependencies-for-development
+dependencies-for-development: venv
+	$(activate-venv); \
+		python3 -m pip install --upgrade pip; \
+		python3 -m pip install --group all .
+
+
+.PHONY: dependencies
+dependencies: venv
+	$(activate-venv); \
+		python3 -m pip install --upgrade pip; \
+		python3 -m pip install -e .
+
+
+.PHONY: install-prettier
+install-prettier:
+	@command -v npx >/dev/null 2>&1 || { echo "npm is required but not installed. Aborting." >&2; exit 1; }
+	@npx prettier --version >/dev/null 2>&1 || npm install --save-dev --save-exact prettier
+
+# -----------------------------------------------------------------------------
+# Setup
+# -----------------------------------------------------------------------------
+
+.PHONY: setup
+setup: setup-osarch-specific
+
+# -----------------------------------------------------------------------------
+# Lint
+# -----------------------------------------------------------------------------
+
+.PHONY: lint
+lint: pylint
+
+# -----------------------------------------------------------------------------
 # Build
 # -----------------------------------------------------------------------------
 
@@ -58,25 +99,29 @@ build-python:
 build: build-csharp build-go build-java build-python
 
 # -----------------------------------------------------------------------------
-# Lint
-# -----------------------------------------------------------------------------
-
-.PHONY: lint
-lint:
-	@pylint $(shell git ls-files '*.py')
-
-# -----------------------------------------------------------------------------
-# Utility targets
+# Clean
 # -----------------------------------------------------------------------------
 
 .PHONY: clean
 clean: clean-osarch-specific
 
+.PHONY: restore
+restore:
+	@git restore \
+		csharp/SzExceptionMapper.cs \
+		go/szerrortypes.go \
+		java/SzExceptionMapper.java \
+		python/szerror.py
+
+
+# -----------------------------------------------------------------------------
+# Utility targets
+# -----------------------------------------------------------------------------
 
 .PHONY: help
 help:
-	@echo "Build $(PROGRAM_NAME) version $(BUILD_VERSION)-$(BUILD_ITERATION)".
-	@echo "Makefile targets:"
+	$(info Build $(PROGRAM_NAME) version $(BUILD_VERSION)-$(BUILD_ITERATION))
+	$(info Makefile targets:)
 	@$(MAKE) -pRrq -f $(firstword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$' | xargs
 
 
@@ -84,8 +129,14 @@ help:
 print-make-variables:
 	@$(foreach V,$(sort $(.VARIABLES)), \
 		$(if $(filter-out environment% default automatic, \
-		$(origin $V)),$(warning $V=$($V) ($(value $V)))))
+		$(origin $V)),$(info $V=$($V) ($(value $V)))))
 
+# -----------------------------------------------------------------------------
+# Specific programs
+# -----------------------------------------------------------------------------
 
-.PHONY: setup
-setup: setup-osarch-specific
+.PHONY: pylint
+pylint:
+	$(info ${\n})
+	$(info --- pylint ---------------------------------------------------------------------)
+	@$(activate-venv); pylint $(shell git ls-files '*.py' ':!:docs/source/*')

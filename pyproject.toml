@@ -92,7 +92,7 @@ test = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["bin"]
 
 [tool.bandit]
 skips = ["B101"]
@@ -131,7 +131,7 @@ disable = [
   "too-many-arguments",
   "too-many-branches",
   "too-many-function-args",
-  "too-many-locals",  
+  "too-many-locals",
 ]
 
 good-names = ["sz-sdk-errors"]
