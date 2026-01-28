@@ -61,7 +61,7 @@ This project adheres to [Semantic Versioning].
 
 ### Changed in 0.1.3
 
-- Updated /bin/generate_* generators
+- Updated /bin/generate\_\* generators
 - Updated errors
 
 ## [0.1.2] - 2023-04-18

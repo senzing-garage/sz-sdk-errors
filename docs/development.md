@@ -17,12 +17,12 @@ For more information on environment variables, see [Environment Variables].
 
 1. Set these environment variable values:
 
-    ```console
-    export GIT_ACCOUNT=senzing-garage
-    export GIT_REPOSITORY=sz-sdk-errors
-    export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
-    export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
-    ```
+   ```console
+   export GIT_ACCOUNT=senzing-garage
+   export GIT_REPOSITORY=sz-sdk-errors
+   export GIT_ACCOUNT_DIR=~/${GIT_ACCOUNT}.git
+   export GIT_REPOSITORY_DIR="${GIT_ACCOUNT_DIR}/${GIT_REPOSITORY}"
+   ```
 
 1. Using the environment variables values just set, follow steps in [clone-repository] to install the Git repository.
 
@@ -34,10 +34,10 @@ For more information on environment variables, see [Environment Variables].
 
 1. Generate source code.
 
-    ```console
-    cd ${GIT_REPOSITORY_DIR}
-    make build
-    ````
+   ```console
+   cd ${GIT_REPOSITORY_DIR}
+   make build
+   ```
 
    This will create new files in the `go`, `java`, `python`, and `rust` directories.
 
