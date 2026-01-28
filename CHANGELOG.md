@@ -2,8 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog], [markdownlint],
-and this project adheres to [Semantic Versioning].
+The changelog format is based on [Keep a Changelog] and [CommonMark].
+This project adheres to [Semantic Versioning].
 
 ## [0.1.12] - 2025-10-22
 
@@ -61,7 +61,7 @@ and this project adheres to [Semantic Versioning].
 
 ### Changed in 0.1.3
 
-- Updated /bin/generate_* generators
+- Updated /bin/generate\_\* generators
 - Updated errors
 
 ## [0.1.2] - 2023-04-18
@@ -82,6 +82,6 @@ and this project adheres to [Semantic Versioning].
 
 - First draft based on Senzing v3.9 error codes
 
-[Keep a Changelog]: https://keepachangelog.com/en/1.0.0/
-[markdownlint]: https://dlaa.me/markdownlint/
-[Semantic Versioning]: https://semver.org/spec/v2.0.0.html
+[CommonMark]: https://commonmark.org/
+[Keep a Changelog]: https://keepachangelog.com/
+[Semantic Versioning]: https://semver.org/
