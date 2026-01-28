@@ -1,4 +1,4 @@
-# Git variables
+# Makefile for Python project
 
 # Detect the operating system and architecture.
 
