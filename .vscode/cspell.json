@@ -33,6 +33,7 @@
     "EFUNC",
     "elete",
     "ERFRAG",
+    "errortypes",
     "ERRULE",
     "esbenp",
     "FBOVR",
@@ -101,5 +102,8 @@
     "virtualenv",
     "XLITERATOR"
   ],
-  "ignorePaths": [".git/**", ".gitignore"]
+  "ignorePaths": [
+    ".git/**",
+    ".gitignore"
+  ]
 }

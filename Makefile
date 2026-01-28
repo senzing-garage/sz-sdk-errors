@@ -95,8 +95,13 @@ build-python:
 	./bin/generate_python.py
 
 
+.PHONY: build-rust
+build-rust:
+	./bin/generate_rust.py
+
+
 .PHONY: build
-build: build-csharp build-go build-java build-python
+build: build-csharp build-go build-java build-python build-rust
 
 # -----------------------------------------------------------------------------
 # Clean
@@ -111,7 +116,8 @@ restore:
 		csharp/SzExceptionMapper.cs \
 		go/szerrortypes.go \
 		java/SzExceptionMapper.java \
-		python/szerror.py
+		python/szerror.py \
+		rust/errortypes.rs
 
 
 # -----------------------------------------------------------------------------

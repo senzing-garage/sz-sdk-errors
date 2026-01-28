@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The changelog format is based on [Keep a Changelog] and [CommonMark].
 This project adheres to [Semantic Versioning].
 
+## [Unreleased]
+
+### Added in Unreleased
+
+- Added generator for Rust (`bin/generate_rust.py` -> `rust/errortypes.rs`)
+
 ## [0.1.12] - 2025-10-22
 
 ### Added in 0.1.12
