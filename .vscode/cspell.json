@@ -15,6 +15,7 @@
     "CFUNC",
     "CODEOWNER",
     "CONFIGCHKSUM",
+    "cooldown",
     "cref",
     "devhelp",
     "DFCALL",
@@ -96,11 +97,9 @@
     "toplevel",
     "typehints",
     "UTYPE",
+    "venv",
     "virtualenv",
     "XLITERATOR"
   ],
-  "ignorePaths": [
-    ".git/**",
-    ".gitignore"
-  ]
+  "ignorePaths": [".git/**", ".gitignore"]
 }
