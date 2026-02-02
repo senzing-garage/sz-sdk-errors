@@ -102,8 +102,5 @@
     "virtualenv",
     "XLITERATOR"
   ],
-  "ignorePaths": [
-    ".git/**",
-    ".gitignore"
-  ]
+  "ignorePaths": [".git/**", ".gitignore"]
 }
