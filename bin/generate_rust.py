@@ -41,28 +41,6 @@ OUTPUT_HEADER += f"// Generated date: {datetime.now(timezone.utc).isoformat()}\n
 OUTPUT_HEADER += """
 use phf::phf_map;
 
-/// Enumeration of Senzing error types.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum SzError {
-    SzBadInputError,
-    SzConfigurationError,
-    SzDatabaseConnectionLostError,
-    SzDatabaseError,
-    SzDatabaseTransientError,
-    SzError,
-    SzGeneralError,
-    SzLicenseError,
-    SzNotFoundError,
-    SzNotInitializedError,
-    SzReplaceConflictError,
-    SzRetryableError,
-    SzRetryTimeoutExceededError,
-    SzSdkError,
-    SzUnhandledError,
-    SzUnknownDataSourceError,
-    SzUnrecoverableError,
-}
-
 /// Static mapping from Senzing error code to corresponding error type.
 pub static SZ_ERROR_TYPES: phf::Map<i32, SzError> = phf_map! {
     0_i32 => SzError::SzError,
