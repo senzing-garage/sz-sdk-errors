@@ -54,17 +54,17 @@ with open(INPUT_FILE, encoding="utf-8") as input_file:
 with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
     file.write(OUTPUT_HEADER)
     for error_number, error_data in errors.items():
-        OUTPUT_LINE = ""
+        output_line = ""
         error_class = error_data.get("class")
         if error_class:
-            OUTPUT_LINE = f"    {error_number}_i32 => SzError::{error_class},"
+            output_line = f"    {error_number}_i32 => SzError::{error_class},"
             error_name = error_data.get("name")
             error_comment = error_data.get("comment")
             if error_name or error_comment:
-                OUTPUT_LINE += f" // {error_name} - {error_comment}"
-        if len(OUTPUT_LINE) > 0:
-            OUTPUT_LINE += "\n"
-            file.write(OUTPUT_LINE)
+                output_line += f" // {error_name} - {error_comment}"
+        if len(output_line) > 0:
+            output_line += "\n"
+            file.write(output_line)
     file.write(OUTPUT_FOOTER)
 
 # Epilog.
