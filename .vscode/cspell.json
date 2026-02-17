@@ -54,6 +54,7 @@
     "isort",
     "jquery",
     "jsmath",
+    "kernelsam",
     "kwargs",
     "LIBFEAT",
     "locklist",
