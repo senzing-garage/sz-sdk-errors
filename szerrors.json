@@ -587,6 +587,12 @@
         "name": "EAS_ERR_DATABASE_SCHEMA_TABLES_NOT_FOUND",
         "comment": "Datastore schema tables not found. [{0}]"
     },
+    "1020": {
+        "code": "SENZ1020",
+        "class": "SzError",
+        "name": "EAS_ERR_DATABASE_CONNECTION_NEEDS_VALIDATION",
+        "comment": "Database Connection Needs Validation '{0}'"
+    },
     "2001": {
         "code": "SENZ2001",
         "class": "SzConfigurationError",
@@ -2734,5 +2740,11 @@
         "class": "SzError",
         "name": "EAS_ERR_GNR_RESOURCE_HANDLE_NOT_INITIALIZED",
         "comment": "GNRResourceHandle not initialized - primeGNRResources() must be called first"
+    },
+    "9807": {
+        "code": "SENZ9807",
+        "class": "SzError",
+        "name": "EAS_ERR_ADDRESS_INTERPRETER_INIT_FAILED",
+        "comment": "AddressInterpreter initialization failed: {0}"
     }
 }
