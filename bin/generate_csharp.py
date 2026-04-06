@@ -85,9 +85,7 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
             error_comment = error_data.get("comment")
             if error_name or error_comment:
                 pad_class_len = len(error_number) + len(exception_class)
-                OUTPUT_LINE += (
-                    " " * (PAD_CLASS - pad_class_len)
-                ) + f'  // {error_name:<85} "{error_comment}"'
+                OUTPUT_LINE += (" " * (PAD_CLASS - pad_class_len)) + f'  // {error_name:<85} "{error_comment}"'
         if len(OUTPUT_LINE) > 0:
             OUTPUT_LINE += "\n"
             file.write(OUTPUT_LINE)

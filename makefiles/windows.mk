@@ -17,12 +17,17 @@ clean-osarch-specific:
 
 .PHONY: hello-world-osarch-specific
 hello-world-osarch-specific:
-	@echo "Hello World, from windows."
+	$(info Hello World, from windows.)
 
 
 .PHONY: setup-osarch-specific
 setup-osarch-specific:
-	@echo "No setup required."
+	$(info No setup required.)
+
+
+.PHONY: venv-osarch-specific
+venv-osarch-specific:
+	@python -m venv .venv
 
 # -----------------------------------------------------------------------------
 # Makefile targets supported only by this platform.
@@ -30,4 +35,4 @@ setup-osarch-specific:
 
 .PHONY: only-windows
 only-windows:
-	@echo "Only windows has this Makefile target."
+	$(info Only windows has this Makefile target.)

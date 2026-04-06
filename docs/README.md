@@ -1,5 +1,8 @@
 # sz-sdk-errors
 
-Placeholder for [GitHub pages](https://pages.github.com/).
+Placeholder for [GitHub pages].
 
-See [https://hub.senzing.com/sz-sdk-errors](https://hub.senzing.com/sz-sdk-errors).
+See [GitHub page].
+
+[GitHub page]: https://garage.senzing.com/sz-sdk-errors
+[GitHub pages]: https://pages.github.com/

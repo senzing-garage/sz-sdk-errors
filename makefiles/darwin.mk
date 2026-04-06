@@ -17,12 +17,17 @@ clean-osarch-specific:
 
 .PHONY: hello-world-osarch-specific
 hello-world-osarch-specific:
-	@echo "Hello World, from darwin."
+	$(info Hello World, from darwin.)
 
 
 .PHONY: setup-osarch-specific
 setup-osarch-specific:
-	@echo "No setup required."
+	$(info No setup required.)
+
+
+.PHONY: venv-osarch-specific
+venv-osarch-specific:
+	@python3 -m venv .venv
 
 # -----------------------------------------------------------------------------
 # Makefile targets supported only by this platform.
@@ -30,4 +35,4 @@ setup-osarch-specific:
 
 .PHONY: only-darwin
 only-darwin:
-	@echo "Only darwin has this Makefile target."
+	$(info Only darwin has this Makefile target.)
