@@ -589,7 +589,7 @@
     },
     "1020": {
         "code": "SENZ1020",
-        "class": "SzError",
+        "class": "SzDatabaseConnectionLostError",
         "name": "EAS_ERR_DATABASE_CONNECTION_NEEDS_VALIDATION",
         "comment": "Database Connection Needs Validation '{0}'"
     },
